@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/blockchain/node_modules
+/blockchain/.secret
 /.pnp
 .pnp.js
 
