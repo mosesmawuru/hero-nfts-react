@@ -4,8 +4,15 @@ import { Text } from "../../components/Text";
 import { theme } from "../../theme";
 const Overview = () => {
   return (
-    <Col backgroundColor={theme.primaryDark}>
-      <Text fontFamily="Open Sans">Overview</Text>
+    <Col backgroundColor={theme.primaryDark} align="center">
+      <Text
+        fontSize="55px"
+        fontWeight="500"
+        fontFamily="Aladin"
+        margin="30px 0 0"
+      >
+        Overview
+      </Text>
       <Row>
         <Col>
           <Text>WELCOME TO THE BORED APE YACHT CLUB</Text>

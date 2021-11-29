@@ -1,12 +1,19 @@
 import React from "react";
-import { Row, Col } from "../../components/Layout";
+import { Col } from "../../components/Layout";
 import { Text } from "../../components/Text";
 import { theme } from "../../theme";
 const Roadmap = () => {
   return (
-    <Row backgroundColor={theme.primaryDark} width="100%">
+    <Col backgroundColor={theme.primaryDark} align="center">
+      <Text
+        fontSize="55px"
+        fontWeight="500"
+        fontFamily="Aladin"
+        margin="30px 0 0"
+      >
+        Roadmap
+      </Text>
       <Col>
-        <Text>Roadmap</Text>
         <Text>
           1) Once all 6969 unique NFTs have been minted, we will be giving away
           the value of a tesla Model 3 in Eth to 5 random wallets. Each purchase
@@ -30,7 +37,7 @@ const Roadmap = () => {
           from these various business will 100% be redistributed to holders of
         </Text>
       </Col>
-    </Row>
+    </Col>
   );
 };
 export default Roadmap;

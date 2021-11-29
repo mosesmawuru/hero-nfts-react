@@ -15,11 +15,11 @@ const Navbar = () => {
       padding="5px 20px"
       width="calc(100% - 40px)"
     >
-      <Row maxWidth="1300px" justify="space-between" width="100%">
+      <Row justify="space-between" width="100%">
         <Row>
           <Image src={Logo} width="40px" height="40px" borderRadius="100%" />
-          <Text fontFamily="Open Sans" margin="0 0 0 10px" fontSize="20px">
-            Heroes of extraterrestrial societies
+          <Text margin="0 0 0 10px" fontSize="20px">
+            Hero
           </Text>
         </Row>
         <Button>

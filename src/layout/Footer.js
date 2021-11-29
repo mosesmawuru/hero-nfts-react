@@ -16,9 +16,10 @@ const Footer = () => {
     <Row
       height="50px"
       backgroundColor={theme.primaryDark}
-      width="100%"
       align="center"
       justify="space-between"
+      padding="5px 20px"
+      width="calc(100% - 40px)"
     >
       <Col width="auto">
         <Text>Heroes of extraterrestrial societies</Text>
@@ -27,12 +28,12 @@ const Footer = () => {
       <Row>
         <Image src={Logo} width="40px" height="40px" />
       </Row>
-      <Row>
-        <FaTwitter color={theme.primaryLight} />
-        <FaInstagram color={theme.primaryLight} />
-        <FaYoutube color={theme.primaryLight} />
-        <FaDiscord color={theme.primaryLight} />
-        <FaTelegram color={theme.primaryLight} />
+      <Row mgap="0 10px 0 0">
+        <FaTwitter color={theme.primaryLight} size="30" />
+        <FaInstagram color={theme.primaryLight} size="30" />
+        <FaYoutube color={theme.primaryLight} size="30" />
+        <FaDiscord color={theme.primaryLight} size="30" />
+        <FaTelegram color={theme.primaryLight} size="30" />
       </Row>
     </Row>
   );
