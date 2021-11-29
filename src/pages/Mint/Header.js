@@ -13,6 +13,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 // @import assets
 import backImg from "../../assets/background.jpg";
+
 const Header = () => {
   const [startDate, setStartDate] = useState(new Date());
   return (
@@ -39,7 +40,7 @@ const Header = () => {
         EXTRATERRESTRIAL SOCIETIES
       </Text>
 
-      <Row>
+      <Row margin="10px 0 0 0">
         <DatePicker
           className="date-selector"
           selected={startDate}

@@ -13,7 +13,7 @@ const Roadmap = () => {
       >
         Roadmap
       </Text>
-      <Col maxWidth="1300px" mgap="0 0 10px 0" margin="0 0 50px 0">
+      <Col maxWidth="1300px" mgap="0 0 10px 0" margin="20px 0 50px 0">
         <Text fontSize="24px" fontWeight="500">
           1) Once all 6969 unique NFTs have been minted, we will be giving away
           the value of a tesla Model 3 in Eth to 5 random wallets. Each purchase

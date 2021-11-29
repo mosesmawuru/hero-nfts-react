@@ -11,7 +11,7 @@ import Logo4 from "../../assets/NFT/4.jpg";
 const Overview = () => {
   return (
     <Col backgroundColor={theme.primaryDark} align="center">
-      <Col align="center" maxWidth="1300px">
+      <Col align="center" maxWidth="1300px" margin="0 0 40px 0">
         <Text
           fontSize="55px"
           fontWeight="500"
@@ -20,7 +20,7 @@ const Overview = () => {
         >
           Overview
         </Text>
-        <Row padding="0 40px" align="flex-start">
+        <Row margin="20px 0 0 0" padding="0 40px" align="flex-start">
           <Col margin="0 30px 0 0">
             <Text fontSize="35px" fontWeight="700">
               WELCOME TO THE BORED APE YACHT CLUB
