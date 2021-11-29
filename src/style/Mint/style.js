@@ -13,9 +13,13 @@ export const StyledHeader = styled.div`
     border-radius: 20px;
     width: 200px;
     border: none;
+    margin-right: 20px;
   }
   .react-datepicker-wrapper {
     width: auto;
+  }
+  .react-datepicker-popper {
+    z-index: 3;
   }
   .react-datepicker-ignore-onclickoutside {
     padding: 10px;

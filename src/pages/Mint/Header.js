@@ -38,7 +38,7 @@ const Header = () => {
         EXTRATERRESTRIAL SOCIETIES
       </Text>
 
-      <Row mgap="0 20px 0 0">
+      <Row>
         <DatePicker
           className="date-selector"
           selected={startDate}
