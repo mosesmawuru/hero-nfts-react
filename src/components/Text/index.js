@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "../../../theme";
+import { theme } from "../../theme";
 export const Text = styled.span`
   flex: ${(props) => props.flex || "auto"};
   width: ${(props) => props.width || "auto"};
@@ -22,4 +22,5 @@ export const Text = styled.span`
   top: ${(props) => props.top};
   left: ${(props) => props.left};
   transform: ${(props) => props.rotate || "rotate(0)"};
+  word-wrap: break-word;
 `;
