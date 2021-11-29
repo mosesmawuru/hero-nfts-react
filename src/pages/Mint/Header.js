@@ -12,7 +12,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 // @import assets
-import backImg from "../../assets/background.jpg";
+import backImg from "../../assets/meta.png";
 
 const Header = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -30,7 +30,7 @@ const Header = () => {
         fontSize="55px"
         fontWeight="500"
         fontFamily="Aladin"
-        margin="30px 0 0"
+        margin="50px 0 0"
         align="center"
         maxWidth="1100px"
         padding="0 20px"

@@ -34,10 +34,10 @@ const Overview = () => {
             </Text>
           </Col>
           <HeroGrid>
-            <Image src={Logo1} width="180px" height="200px" />
-            <Image src={Logo2} width="180px" height="200px" />
-            <Image src={Logo3} width="180px" height="200px" />
-            <Image src={Logo4} width="180px" height="200px" />
+            <Image src={Logo1} width="170px" height="200px" />
+            <Image src={Logo2} width="170px" height="200px" />
+            <Image src={Logo3} width="170px" height="200px" />
+            <Image src={Logo4} width="170px" height="200px" />
           </HeroGrid>
         </Row>
       </Col>

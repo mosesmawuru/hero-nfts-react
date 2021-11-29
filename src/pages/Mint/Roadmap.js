@@ -20,16 +20,16 @@ const Roadmap = () => {
           is a single entry, but each wallet can only win once.
         </Text>
         <Text fontSize="24px" fontWeight="500">
-          2)We want this project to be about community. Joining the society will
-          grant access to exclusive content, events, and meetups each year.
+          2) We want this project to be about community. Joining the society
+          will grant access to exclusive content, events, and meetups each year.
         </Text>
         <Text fontSize="24px" fontWeight="500">
-          3)Owning a Hero will grant exclusive minting access to a complimentary
-          wives collection. With breeding children on the horizon.
+          3) Owning a Hero will grant exclusive minting access to a
+          complimentary wives collection. With breeding children on the horizon.
         </Text>
         <Text fontSize="24px" fontWeight="500">
-          4)Owning HOES grants voting rights in the direction of the project. We
-          want to empower our community and allow them to take action.
+          4) Owning HOES grants voting rights in the direction of the project.
+          We want to empower our community and allow them to take action.
         </Text>
         <Text fontSize="24px" fontWeight="500">
           5) Don’t want to spoil too much but we plan to establish various
