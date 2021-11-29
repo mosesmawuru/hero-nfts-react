@@ -18,8 +18,8 @@ const Navbar = () => {
       <Row maxWidth="1300px" justify="space-between" width="100%">
         <Row>
           <Image src={Logo} width="40px" height="40px" borderRadius="100%" />
-          <Text fontFamily="Open Sans" margin="0 0 0 10px">
-            Our Logo
+          <Text fontFamily="Open Sans" margin="0 0 0 10px" fontSize="20px">
+            Heroes of extraterrestrial societies
           </Text>
         </Row>
         <Button>
