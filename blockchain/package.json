@@ -13,10 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@openzeppelin/contracts": "^4.3.2",
-    "@truffle/hdwallet-provider": "^1.6.0",
-    "react-copy-to-clipboard": "^5.0.4",
-    "react-router-dom": "^5.3.0",
-    "react-toastify": "^8.1.0"
+    "@truffle/hdwallet-provider": "^1.6.0"
   },
   "devDependencies": {
     "truffle-plugin-verify": "^0.5.18"
