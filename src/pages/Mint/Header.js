@@ -32,6 +32,7 @@ const Header = () => {
         margin="30px 0 0"
         align="center"
         maxWidth="1100px"
+        padding="0 20px"
       >
         IN THE NEAR FUTURE, LORD ELON PRODUCED CLONES OF HIMSELF TO RULE WORLDS
         ACROSS THE METAVERSE AND BEYOND. THEY BECAME KNOWN AS HEROES OF
@@ -66,7 +67,7 @@ const Header = () => {
           </Text>
         </Button>
       </Row>
-      <Text fontSize="35px" fontWeight="500">
+      <Text fontSize="35px" fontWeight="Bold" margin="0 0 30px 0">
         Minting soon
       </Text>
     </StyledHeader>

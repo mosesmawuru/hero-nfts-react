@@ -49,4 +49,7 @@ export const theme = {
   bgBlueVioleteHover: "rgba(177, 89, 220, 0.9)",
   transparentBorder: "rgba(255, 255, 255, 0.1)",
   transparentBorderHover: "rgba(255, 255, 255, 0.18)",
+  background: "rgb(1,1,2)",
+  nftitem: "rgb(7,10,6)",
+  nftborder: "rgb(14,17,41)",
 };

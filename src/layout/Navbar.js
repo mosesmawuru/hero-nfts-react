@@ -15,7 +15,7 @@ const Navbar = () => {
       padding="5px 20px"
       width="calc(100% - 40px)"
     >
-      <Row justify="space-between" width="100%">
+      <Row justify="space-between" width="100%" maxWidth="1300px">
         <Row>
           <Image src={Logo} width="40px" height="40px" borderRadius="100%" />
           <Text margin="0 0 0 10px" fontSize="20px">

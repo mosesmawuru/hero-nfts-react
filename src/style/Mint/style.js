@@ -29,4 +29,6 @@ export const StyledHeader = styled.div`
 `;
 export const HeroGrid = styled.div`
   display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  gap: 20px;
 `;
