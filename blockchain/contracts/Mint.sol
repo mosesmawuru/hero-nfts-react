@@ -13,13 +13,13 @@ contract MintContract is ERC721, Ownable {
     mapping (address => uint) ownwallet;
     uint256 startTime;
     uint256 duration = 4 hours;
-
+ constructor() ERC721("HERO", "HER") {}
     modifier duringMintTime() {
         require( block.timestamp >= startTime && block.timestamp <= startTime + duration,"It's not mint time");
         _;
     }
 
-    function mintElon (uint _count) external payable duringMintTime{
+    function mintNFT (uint _count) external payable duringMintTime{
         require(total_supply + _count <= 6969, "Can't mint anymore");
         require(msg.value == .069 ether * _count,"Not match balance");
         require(ownwallet[msg.sender] + _count <= 6,"Maxium is 6");

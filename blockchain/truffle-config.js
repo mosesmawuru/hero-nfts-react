@@ -49,6 +49,16 @@ module.exports = {
       port: 8545, // Standard Ethereum port (default: none)
       network_id: "*", // Any network (default: none)
     },
+    ropsten: {
+      provider: function () {
+        return new HDWalletProvider(
+          mnemonic,
+          "https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
+        );
+      },
+      network_id: 3,
+      gas: 4000000, //make sure this gas allocation isn't over 4M, which is the max
+    },
     testnet: {
       provider: () =>
         new HDWalletProvider(
@@ -56,7 +66,7 @@ module.exports = {
           `https://data-seed-prebsc-1-s1.binance.org:8545`
         ),
       network_id: 97,
-	  networkCheckTimeout: 999999,
+      networkCheckTimeout: 999999,
     },
     bsc: {
       provider: () =>

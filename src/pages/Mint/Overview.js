@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Row } from "../../components/Layout";
 import { Text } from "../../components/Text";
+import { HeroGrid } from "../../style/Mint/style";
 import { theme } from "../../theme";
 const Overview = () => {
   return (
@@ -23,6 +24,7 @@ const Overview = () => {
             members-only benefits.
           </Text>
         </Col>
+        <HeroGrid></HeroGrid>
       </Row>
     </Col>
   );

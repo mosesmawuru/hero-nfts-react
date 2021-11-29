@@ -22,7 +22,7 @@ const Navbar = () => {
             Hero
           </Text>
         </Row>
-        <Button>
+        <Button variant="white">
           <Text
             fontFamily="Open Sans"
             color={theme.primaryDark}
