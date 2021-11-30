@@ -34,4 +34,7 @@ contract MintContract is ERC721, Ownable {
     function setMintTime( uint256 _startTime ) external onlyOwner {
         startTime = _startTime;
     }
+    function getRestSupply() external view returns (uint) {
+        return total_supply;
+    }
 }

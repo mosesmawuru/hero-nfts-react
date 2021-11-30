@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // @import Component
-import { Col, Row } from "../../components/Layout";
+import { Col } from "../../components/Layout";
 import { Text } from "../../components/Text";
 import { Image } from "../../components/Image";
 import { Button } from "../../components/Button";
@@ -29,12 +29,12 @@ const Header = () => {
         height="100%"
       />
       <Text
-        fontSize="55px"
-        fontWeight="500"
-        fontFamily="Aladin"
+        fontSize="45px"
+        fontWeight="bold"
+        fontFamily="Montserrat"
         margin="50px 0 0"
         align="center"
-        maxWidth="1100px"
+        maxWidth="950px"
         padding="0 20px"
       >
         IN THE NEAR FUTURE, LORD ELON PRODUCED CLONES OF HIMSELF TO RULE WORLDS
@@ -42,7 +42,7 @@ const Header = () => {
         EXTRATERRESTRIAL SOCIETIES
       </Text>
 
-      <Row margin="10px 0 0 0">
+      <Col margin="10px 0 0 0" align="center">
         <DatePicker
           className="date-selector"
           selected={startDate}
@@ -57,15 +57,15 @@ const Header = () => {
             Set MintTime
           </Text>
         </Button>
-      </Row>
+      </Col>
       <Col
         backdropFilter="blur(10px)"
         borderRadius="20px"
         width="contents"
-        margin="30px 0 0 0"
         padding="20px"
         border={`1px solid ${theme.primaryLight} !important`}
         align="center"
+        mgap="0 0 30px 0"
       >
         <Text
           fontSize="25px"
@@ -73,6 +73,7 @@ const Header = () => {
           fontFamily="Aladin"
           align="center"
           maxWidth="1100px"
+          margin="10px 0 0 0"
         >
           Mint Price: 0.069 ETH
         </Text>
@@ -85,10 +86,17 @@ const Header = () => {
         >
           Max Mint Per Wallet: 6
         </Text>
-
+        <Text
+          fontSize="25px"
+          fontWeight="500"
+          fontFamily="Aladin"
+          align="center"
+          maxWidth="1100px"
+        >
+          Total Mint: 0/6969
+        </Text>
         <Input
           type="number"
-          max="6"
           placeholder="Enter mint count"
           padding="10px 10px"
           onChange={(e) => {

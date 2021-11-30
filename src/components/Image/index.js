@@ -7,4 +7,8 @@ export const Image = styled.img`
   left: ${(props) => props.left || "auto"};
   right: ${(props) => props.right || "auto"};
   border-radius: ${(props) => props.borderRadius || 0};
+  max-width: ${(props) => props.maxWidth || "auto"};
+  min-width: ${(props) => props.minWidth || "auto"};
+  max-height: ${(props) => props.maxHeight || "auto"};
+  min-height: ${(props) => props.minHeight || "auto"};
 `;

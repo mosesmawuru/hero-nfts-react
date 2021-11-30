@@ -16,7 +16,7 @@ export const StyledButton = styled.button(
       width: props.width,
     }),
   {
-    zIndex: 20,
+    zIndex: 2,
     appearance: "none",
     display: "flex",
     alignItems: "center",
