@@ -11,9 +11,8 @@ export const StyledHeader = styled.div`
   .date-selector {
     padding: 10px;
     border-radius: 10px;
-    width: 200px;
+    width: 100px;
     border: none;
-    margin-right: 20px;
     font-size: 1rem;
     font-weight: bold;
   }
@@ -28,6 +27,17 @@ export const StyledHeader = styled.div`
     outline: none;
     font-weight: bold;
   }
+  .time-selector {
+    margin-left: 20px;
+    width: 100px;
+    border: none;
+    outline: none;
+  }
+  .rc-time-picker-input {
+    font-weight: bold;
+    font-size: 1rem;
+    height: 38px;
+  }
   & > *:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -36,7 +46,10 @@ export const HeroGrid = styled.div`
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   gap: 20px;
+  margin-left: 30px;
   @media screen and (max-width: 850px) {
+    margin-left: 0px;
+    margin-top: 30px;
     grid-template: repeat(1, 1fr) / repeat(4, 1fr);
   }
   @media screen and (max-width: 750px) {
@@ -55,9 +68,5 @@ export const StyledOverview = styled.div`
   @media screen and (max-width: 850px) {
     flex-direction: column;
     align-items: center;
-  }
-
-  & > *:not(:last-child) {
-    margin-right: 30px;
   }
 `;

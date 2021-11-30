@@ -1,7 +1,6 @@
 import React from "react";
 import { Col, Row } from "../components/Layout";
 import { Text } from "../components/Text";
-
 import { theme } from "../theme";
 import { FaTwitter, FaInstagram, FaDiscord } from "react-icons/fa";
 const Footer = () => {
@@ -20,21 +19,15 @@ const Footer = () => {
         </Col>
 
         <Row mgap="0 10px 0 0">
-          <FaTwitter
-            color={theme.primaryLight}
-            size="30"
-            href="https://twitter.com/HOESNFT"
-          />
-          <FaInstagram
-            color={theme.primaryLight}
-            size="30"
-            href="https://www.instagram.com/hoesnft"
-          />
-          <FaDiscord
-            color={theme.primaryLight}
-            size="30"
-            href="https://discord.gg/4VbaqFHP"
-          />
+          <a href="https://twitter.com/HOESNFT">
+            <FaTwitter color={theme.primaryLight} size="30" />
+          </a>
+          <a href="https://www.instagram.com/hoesnft">
+            <FaInstagram color={theme.primaryLight} size="30" />
+          </a>
+          <a href="https://discord.gg/4VbaqFHP">
+            <FaDiscord color={theme.primaryLight} size="30" />
+          </a>
         </Row>
       </Row>
     </Row>

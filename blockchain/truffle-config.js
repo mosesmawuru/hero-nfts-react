@@ -57,7 +57,12 @@ module.exports = {
         );
       },
       network_id: 3,
-      gas: 4000000, //make sure this gas allocation isn't over 4M, which is the max
+      numberOfAddresses: 1,
+      gas: 3502000,
+      gasPrice: 1500001236,
+      networkCheckTimeout: 1000000,
+      timeoutBlocks: 200,
+      gasLimit: 8000000,
     },
     testnet: {
       provider: () =>
@@ -121,6 +126,10 @@ module.exports = {
       //  evmVersion: "byzantium"
       // }
     },
+  },
+  plugins: ["truffle-plugin-verify"],
+  api_keys: {
+    etherscan: "GG4ACY9R8FN4EN3QFVXM6U3EDC9CRNIW52",
   },
 
   // Truffle DB is currently disabled by default; to enable it, change enabled:

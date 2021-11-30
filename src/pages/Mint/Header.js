@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 // @import Component
-import { Col } from "../../components/Layout";
+import { Col, Row } from "../../components/Layout";
 import { Text } from "../../components/Text";
 import { Image } from "../../components/Image";
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
+// import { DatetimeInput } from "react-datetime-inputs";
+import TimePicker from "rc-time-picker";
+import "rc-time-picker/assets/index.css";
 // @import assets
 import { theme } from "../../theme";
 import { StyledHeader } from "../../style/Mint/style";
@@ -16,6 +19,7 @@ import backImg from "../../assets/meta.png";
 
 const Header = () => {
   const [startDate, setStartDate] = useState(new Date());
+  const [time, setTime] = useState(new Date());
   const [count, setCount] = useState(0);
   const onMint = () => {};
   return (
@@ -29,7 +33,7 @@ const Header = () => {
         height="100%"
       />
       <Text
-        fontSize="45px"
+        fontSize="35px"
         fontWeight="bold"
         fontFamily="Montserrat"
         margin="50px 0 0"
@@ -42,31 +46,38 @@ const Header = () => {
         EXTRATERRESTRIAL SOCIETIES
       </Text>
 
-      <Col margin="10px 0 0 0" align="center">
-        <DatePicker
-          className="date-selector"
-          selected={startDate}
-          onChange={(date) => setStartDate(date)}
-        />
-        <Button variant="white">
-          <Text
-            fontFamily="Open Sans"
-            color={theme.primaryDark}
-            fontWeight="bold"
-          >
-            Set MintTime
-          </Text>
-        </Button>
-      </Col>
       <Col
         backdropFilter="blur(10px)"
         borderRadius="20px"
-        width="contents"
-        padding="20px"
+        width="100%"
+        maxWidth="300px"
+        padding="20px 0"
         border={`1px solid ${theme.primaryLight} !important`}
         align="center"
         mgap="0 0 30px 0"
       >
+        <Col margin="10px 0 0 0" align="center">
+          <Row>
+            <DatePicker
+              className="date-selector"
+              selected={startDate}
+              onChange={(date) => setStartDate(date)}
+              placeholder="Enter Date"
+            />
+            <TimePicker className="time-selector" placeholder="Enter time" />
+          </Row>
+          <Col align="center" margin="20px 0 0">
+            <Button variant="white">
+              <Text
+                fontFamily="Open Sans"
+                color={theme.primaryDark}
+                fontWeight="bold"
+              >
+                Set MintTime
+              </Text>
+            </Button>
+          </Col>
+        </Col>
         <Text
           fontSize="25px"
           fontWeight="500"

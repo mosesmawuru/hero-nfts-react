@@ -23,7 +23,7 @@ const Overview = () => {
         </Text>
         <StyledOverview>
           <Col>
-            <Text fontSize="35px" fontWeight="700">
+            <Text fontSize="30px" fontWeight="700">
               WELCOME TO THE BORED APE YACHT CLUB
             </Text>
 
@@ -35,10 +35,34 @@ const Overview = () => {
             </Text>
           </Col>
           <HeroGrid>
-            <Image src={Logo1} width="150px" height="200px" />
-            <Image src={Logo2} width="150px" height="200px" />
-            <Image src={Logo3} width="150px" height="200px" />
-            <Image src={Logo4} width="150px" height="200px" />
+            <Image
+              src={Logo1}
+              width="150px"
+              height="200px"
+              border={`1px solid white`}
+              borderRadius="10px"
+            />
+            <Image
+              src={Logo2}
+              width="150px"
+              height="200px"
+              border={`1px solid white`}
+              borderRadius="10px"
+            />
+            <Image
+              src={Logo3}
+              width="150px"
+              height="200px"
+              border={`1px solid white`}
+              borderRadius="10px"
+            />
+            <Image
+              src={Logo4}
+              width="150px"
+              height="200px"
+              border={`1px solid white`}
+              borderRadius="10px"
+            />
           </HeroGrid>
         </StyledOverview>
       </Col>

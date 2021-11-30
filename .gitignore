@@ -2,10 +2,14 @@
 
 # dependencies
 /node_modules
+
+
 /blockchain/node_modules
 /blockchain/.secret
 /blockchain/build/contracts
 /blockchain/build
+/blockchain/.env
+.env
 /.pnp
 .pnp.js
 
