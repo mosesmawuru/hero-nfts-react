@@ -5,14 +5,14 @@ import { Text } from "../../components/Text";
 import { Image } from "../../components/Image";
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
-// import { DatetimeInput } from "react-datetime-inputs";
-import TimePicker from "rc-time-picker";
-import "rc-time-picker/assets/index.css";
+
 // @import assets
 import { theme } from "../../theme";
 import { StyledHeader } from "../../style/Mint/style";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import TimePicker from "rc-time-picker";
+import "rc-time-picker/assets/index.css";
 
 // @import assets
 import backImg from "../../assets/meta.png";
