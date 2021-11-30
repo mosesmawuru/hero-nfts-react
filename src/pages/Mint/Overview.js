@@ -15,7 +15,7 @@ const Overview = () => {
       <Col align="center" maxWidth="1300px" margin="0 0 40px 0">
         <Text
           fontSize="55px"
-          fontWeight="500"
+          fontWeight="bold"
           fontFamily="Montserrat"
           margin="30px 0 0"
         >

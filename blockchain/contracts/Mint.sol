@@ -37,4 +37,9 @@ contract MintContract is ERC721, Ownable {
     function getRestSupply() external view returns (uint) {
         return total_supply;
     }
+    function withdraw() external onlyOwner {
+        address  _owner = owner();
+        payable(_owner).transfer(address(this).balance);
+    }
+  
 }

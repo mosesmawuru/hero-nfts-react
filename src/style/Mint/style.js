@@ -6,8 +6,24 @@ export const StyledHeader = styled.div`
   width: 100%;
   align-items: center;
   position: relative;
-  background-image: ${(props) => props.backgroundImage};
-
+  @media screen and (max-width: 1000px) {
+    .img-background {
+      background-size: cover;
+    }
+    .header-text {
+      font-size: 30px;
+    }
+  }
+  @media screen and (max-width: 670px) {
+    .header-text {
+      font-size: 25px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .header-text {
+      font-size: 20px;
+    }
+  }
   .date-selector {
     padding: 10px;
     border-radius: 10px;

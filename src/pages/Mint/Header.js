@@ -63,10 +63,11 @@ const Header = () => {
         height="100%"
       />
       <Text
+        className="header-text"
         fontSize="35px"
         fontWeight="bold"
         fontFamily="Montserrat"
-        margin="50px 0 0"
+        margin="50px 0 0 0"
         align="center"
         maxWidth="950px"
         padding="0 20px"
@@ -77,14 +78,15 @@ const Header = () => {
       </Text>
 
       <Col
-        backdropFilter="blur(10px)"
-        borderRadius="20px"
         width="100%"
+        align="center"
+        margin="30px 0 0 0"
+        mgap="0 0 20px 0"
         maxWidth="300px"
         padding="20px 0"
+        backdropFilter="blur(10px)"
+        borderRadius="20px"
         border={`1px solid ${theme.primaryLight} !important`}
-        align="center"
-        mgap="0 0 20px 0"
       >
         <Col margin="10px 0 0 0" align="center">
           <Row>
@@ -97,12 +99,8 @@ const Header = () => {
             <TimePicker className="time-selector" placeholder="Enter time" />
           </Row>
           <Col align="center" margin="20px 0 0">
-            <Button variant="white">
-              <Text
-                fontFamily="Open Sans"
-                color={theme.primaryDark}
-                fontWeight="bold"
-              >
+            <Button variant="orchid">
+              <Text fontFamily="Open Sans" fontWeight="bold">
                 Set MintTime
               </Text>
             </Button>
@@ -164,7 +162,7 @@ const Header = () => {
           </Text>
         </Button>
       </Col>
-      <Text fontSize="35px" fontWeight="Bold" margin="100px 0 30px 0">
+      <Text fontSize="35px" fontWeight="Bold" margin="50px 0 30px 0">
         Minting soon
       </Text>
       <ToastContainer />

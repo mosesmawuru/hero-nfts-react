@@ -7,7 +7,7 @@ const Roadmap = () => {
     <Col backgroundColor={theme.nftitem} align="center">
       <Text
         fontSize="55px"
-        fontWeight="500"
+        fontWeight="bold"
         fontFamily="Montserrat"
         margin="30px 0 0"
       >
