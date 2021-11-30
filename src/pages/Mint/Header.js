@@ -5,7 +5,8 @@ import { Text } from "../../components/Text";
 import { Image } from "../../components/Image";
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
-
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 // @import assets
 import { theme } from "../../theme";
 import { StyledHeader } from "../../style/Mint/style";
@@ -19,9 +20,17 @@ import backImg from "../../assets/meta.png";
 
 const Header = () => {
   const [startDate, setStartDate] = useState(new Date());
-  const [time, setTime] = useState(new Date());
+  // const [time, setTime] = useState(new Date());
   const [count, setCount] = useState(0);
-  const onMint = () => {};
+  const onMint = () => {
+    if (count > 6) {
+      toast.error("Max Mint count is 6");
+    } else if (count < 1) {
+      toast.error("Please check count");
+    } else {
+      toast.success("Success");
+    }
+  };
   return (
     <StyledHeader>
       <Image
@@ -54,7 +63,7 @@ const Header = () => {
         padding="20px 0"
         border={`1px solid ${theme.primaryLight} !important`}
         align="center"
-        mgap="0 0 30px 0"
+        mgap="0 0 20px 0"
       >
         <Col margin="10px 0 0 0" align="center">
           <Row>
@@ -141,6 +150,7 @@ const Header = () => {
       <Text fontSize="35px" fontWeight="Bold" margin="100px 0 30px 0">
         Minting soon
       </Text>
+      <ToastContainer />
     </StyledHeader>
   );
 };
