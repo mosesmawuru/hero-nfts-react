@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // @import Component
-import { Row } from "../../components/Layout";
+import { Col, Row } from "../../components/Layout";
 import { Text } from "../../components/Text";
 import { Image } from "../../components/Image";
 import { Button } from "../../components/Button";
@@ -16,6 +16,8 @@ import backImg from "../../assets/meta.png";
 
 const Header = () => {
   const [startDate, setStartDate] = useState(new Date());
+  const [count, setCount] = useState(0);
+  const onMint = () => {};
   return (
     <StyledHeader>
       <Image
@@ -56,9 +58,58 @@ const Header = () => {
           </Text>
         </Button>
       </Row>
-      <Row mgap="0 20px 0 0" margin="30px 0 200px 0">
-        <Input type="text" placeholder="Enter mint count" padding="10px 10px" />
-        <Button variant="white">
+      <Col
+        backdropFilter="blur(10px)"
+        borderRadius="20px"
+        width="contents"
+        margin="30px 0 0 0"
+        padding="20px"
+        border={`1px solid ${theme.primaryLight} !important`}
+        align="center"
+      >
+        <Text
+          fontSize="25px"
+          fontWeight="500"
+          fontFamily="Aladin"
+          align="center"
+          maxWidth="1100px"
+        >
+          Mint Price: 0.069 ETH
+        </Text>
+        <Text
+          fontSize="25px"
+          fontWeight="500"
+          fontFamily="Aladin"
+          align="center"
+          maxWidth="1100px"
+        >
+          Max Mint Per Wallet: 6
+        </Text>
+
+        <Input
+          type="number"
+          max="6"
+          placeholder="Enter mint count"
+          padding="10px 10px"
+          onChange={(e) => {
+            setCount(e.target.value);
+          }}
+        />
+        <Text
+          fontSize="25px"
+          fontWeight="500"
+          fontFamily="Aladin"
+          align="center"
+          maxWidth="1100px"
+        >
+          Total ETH: {(count * 0.069).toFixed(3)} ETH
+        </Text>
+        <Button
+          variant="white"
+          onClick={() => {
+            onMint();
+          }}
+        >
           <Text
             fontFamily="Open Sans"
             color={theme.primaryDark}
@@ -67,8 +118,8 @@ const Header = () => {
             Mint
           </Text>
         </Button>
-      </Row>
-      <Text fontSize="35px" fontWeight="Bold" margin="0 0 30px 0">
+      </Col>
+      <Text fontSize="35px" fontWeight="Bold" margin="100px 0 30px 0">
         Minting soon
       </Text>
     </StyledHeader>

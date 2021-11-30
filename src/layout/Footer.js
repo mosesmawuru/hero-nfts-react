@@ -3,13 +3,7 @@ import { Col, Row } from "../components/Layout";
 import { Text } from "../components/Text";
 
 import { theme } from "../theme";
-import {
-  FaTwitter,
-  FaInstagram,
-  FaYoutube,
-  FaDiscord,
-  FaTelegram,
-} from "react-icons/fa";
+import { FaTwitter, FaInstagram, FaDiscord } from "react-icons/fa";
 const Footer = () => {
   return (
     <Row height="80px" backgroundColor={theme.background} width="100%">
@@ -26,11 +20,21 @@ const Footer = () => {
         </Col>
 
         <Row mgap="0 10px 0 0">
-          <FaTwitter color={theme.primaryLight} size="30" />
-          <FaInstagram color={theme.primaryLight} size="30" />
-          <FaYoutube color={theme.primaryLight} size="30" />
-          <FaDiscord color={theme.primaryLight} size="30" />
-          <FaTelegram color={theme.primaryLight} size="30" />
+          <FaTwitter
+            color={theme.primaryLight}
+            size="30"
+            href="https://twitter.com/HOESNFT"
+          />
+          <FaInstagram
+            color={theme.primaryLight}
+            size="30"
+            href="https://www.instagram.com/hoesnft"
+          />
+          <FaDiscord
+            color={theme.primaryLight}
+            size="30"
+            href="https://discord.gg/4VbaqFHP"
+          />
         </Row>
       </Row>
     </Row>
