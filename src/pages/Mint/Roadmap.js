@@ -8,7 +8,7 @@ const Roadmap = () => {
       <Text
         fontSize="55px"
         fontWeight="500"
-        fontFamily="Aladin"
+        fontFamily="Montserrat"
         margin="30px 0 0"
       >
         Roadmap

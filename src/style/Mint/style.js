@@ -56,7 +56,11 @@ export const HeroGrid = styled.div`
     grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   }
   @media screen and (max-width: 400px) {
-    grid-template: repeat(4, 1fr) / repeat(1, 1fr);
+    gap: 10px;
+    img {
+      width: 130px;
+      height: 170px;
+    }
   }
 `;
 export const StyledOverview = styled.div`
@@ -66,7 +70,12 @@ export const StyledOverview = styled.div`
   padding: 0 40px;
   align-items: flex-start;
   @media screen and (max-width: 850px) {
+    padding: 0 20px;
     flex-direction: column;
     align-items: center;
+    .overview {
+      align-items: center;
+      text-align: center;
+    }
   }
 `;

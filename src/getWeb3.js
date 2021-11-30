@@ -25,7 +25,7 @@ const getWeb3 = () =>
     // Fallback to localhost; use dev console port by default...
     else {
       const provider = new Web3.providers.HttpProvider(
-        "https://data-seed-prebsc-1-s1.binance.org:8545"
+        "https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
       );
       const web3 = new Web3(provider);
       resolve(web3);

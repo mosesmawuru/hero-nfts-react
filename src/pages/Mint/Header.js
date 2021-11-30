@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 // @import Component
 import { Col, Row } from "../../components/Layout";
 import { Text } from "../../components/Text";
@@ -14,21 +14,42 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import TimePicker from "rc-time-picker";
 import "rc-time-picker/assets/index.css";
-
+// @import web3
+import Web3 from "../../context/web3";
+import { contractABI } from "../../contract/ABI";
 // @import assets
 import backImg from "../../assets/meta.png";
 
 const Header = () => {
   const [startDate, setStartDate] = useState(new Date());
-  // const [time, setTime] = useState(new Date());
   const [count, setCount] = useState(0);
-  const onMint = () => {
+  const { web3 } = useContext(Web3);
+  const onMint = async () => {
     if (count > 6) {
       toast.error("Max Mint count is 6");
     } else if (count < 1) {
       toast.error("Please check count");
     } else {
-      toast.success("Success");
+      const contract = new web3.eth.Contract(
+        contractABI,
+        "0x478aDa529CF5bB1260f17F2b5cD82aF76AC03E5a"
+      );
+      // const address = await web3.eth.getAccounts();
+      await contract.methods
+        .mintNFT(await web3.utils.toWei(count, "ether"))
+        .send({
+          from: "0xb14f0C2e055F90F0b04c86eeB97Bd7DB6c8B0977",
+          value: await web3.utils.toWei(
+            (count * 0.069).toFixed(3).toString(),
+            "ether"
+          ),
+        })
+        .on("receipt", function (receipt) {
+          toast("Success!");
+        })
+        .on("error", function (error) {
+          toast(error);
+        });
     }
   };
   return (
@@ -133,16 +154,12 @@ const Header = () => {
           Total ETH: {(count * 0.069).toFixed(3)} ETH
         </Text>
         <Button
-          variant="white"
+          variant="lightBlue"
           onClick={() => {
             onMint();
           }}
         >
-          <Text
-            fontFamily="Open Sans"
-            color={theme.primaryDark}
-            fontWeight="bold"
-          >
+          <Text fontFamily="Open Sans" fontWeight="bold">
             Mint
           </Text>
         </Button>
