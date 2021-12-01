@@ -36,6 +36,7 @@ const Roadmap = () => {
       document.documentElement.clientHeight
     );
   };
+
   return (
     <Col backgroundColor={theme.nftitem} align="center">
       <Text
@@ -44,7 +45,7 @@ const Roadmap = () => {
         fontFamily="Montserrat"
         margin="30px 0 0"
       >
-        Roadmap
+        Roadmap{position}
       </Text>
       <Col
         maxWidth="1300px"
