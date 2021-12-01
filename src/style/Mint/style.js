@@ -44,8 +44,8 @@ export const StyledHeader = styled.div`
     font-weight: bold;
   }
   .time-selector {
-    margin-left: 20px;
-    width: 100px;
+    margin-top: 20px;
+    width: 120px;
     border: none;
     outline: none;
   }

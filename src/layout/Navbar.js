@@ -1,24 +1,20 @@
-import React, { useContext } from "react";
+import React from "react";
+// @import wallet connection
+import { useEthContext } from "../context/EthereumContext";
+// @import social icon
+import { FaTwitter, FaInstagram, FaDiscord } from "react-icons/fa";
+// @import component
 import { Row, Col } from "../components/Layout";
 import { Text } from "../components/Text";
 import { Button } from "../components/Button";
-import { Image } from "../components/Image";
-import Logo from "../assets/NFT/1.jpg";
+// @import style
 import { theme } from "../theme";
-import getWeb3 from "../getWeb3";
-import Web3 from "../context/web3";
-import { getAccount } from "../wallet/getAccount";
-import { FaTwitter, FaInstagram, FaDiscord } from "react-icons/fa";
-const Navbar = () => {
-  // const account = getAccount();
-  const { setWeb3 } = useContext(Web3);
-  const onConnectWallet = async () => {
-    const web3 = await getWeb3();
-    setWeb3(web3);
-    // const accounts = await web3.eth.getAccounts();
-    // setAccount(accounts[0]);
-  };
 
+const Navbar = () => {
+  const { provider, currentAcc } = useEthContext();
+  const handleConnectWallet = async () => {
+    await provider.request({ method: `eth_requestAccounts` });
+  };
   return (
     <Col
       height="60px"
@@ -43,17 +39,16 @@ const Navbar = () => {
         <Button
           variant="royalBlue"
           onClick={() => {
-            onConnectWallet();
+            handleConnectWallet();
           }}
         >
           <Text fontFamily="Open Sans" fontWeight="bold">
-            {/* {account && account
-              ? `${account.slice(0, 6)}...${account.slice(
-                  account.length - 4,
-                  account.length
+            {currentAcc && currentAcc
+              ? `${currentAcc.slice(0, 6)}...${currentAcc.slice(
+                  currentAcc.length - 4,
+                  currentAcc.length
                 )}`
-              : "Connect Wallet"} */}
-            Connect Wallet
+              : "Connect Wallet"}
           </Text>
         </Button>
       </Row>

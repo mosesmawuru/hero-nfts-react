@@ -1,22 +1,29 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState } from "react";
 // @import Component
+import { toast, ToastContainer } from "react-toastify";
 import { Col, Row } from "../../components/Layout";
-import { Text } from "../../components/Text";
-import { Image } from "../../components/Image";
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-// @import assets
-import { theme } from "../../theme";
-import { StyledHeader } from "../../style/Mint/style";
+import { Image } from "../../components/Image";
+import { Text } from "../../components/Text";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import TimePicker from "rc-time-picker";
+
+// @import assets
+import { StyledHeader } from "../../style/Mint/style";
+import { theme } from "../../theme";
+import "react-datepicker/dist/react-datepicker.css";
+import "react-toastify/dist/ReactToastify.css";
 import "rc-time-picker/assets/index.css";
-// @import web3
-import Web3 from "../../context/web3";
+// @import wallet connection
+import { useEthContext } from "../../context/EthereumContext";
+import {
+  contract_address,
+  admin_address,
+  client_address,
+} from "../../contract/address";
 import { contractABI } from "../../contract/ABI";
+
 // @import assets
 import backImg from "../../assets/meta.png";
 
@@ -24,27 +31,18 @@ const Header = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [selledCount, setSelledCount] = useState(0);
   const [count, setCount] = useState(0);
-  const { web3 } = useContext(Web3);
-  // useEffect(() => {
-  //   setInterval(() => {
-  //     getBalance();
-  //   }, 1000);
-  // });
+  const { web3, currentAcc } = useEthContext();
   const onMint = async () => {
     if (count > 6) {
       toast.error("Max Mint count is 6");
     } else if (count < 1) {
       toast.error("Please check count");
     } else {
-      const contract = new web3.eth.Contract(
-        contractABI,
-        "0x478aDa529CF5bB1260f17F2b5cD82aF76AC03E5a"
-      );
-      // const address = await web3.eth.getAccounts();
+      const contract = new web3.eth.Contract(contractABI, contract_address);
       await contract.methods
         .mintNFT(await web3.utils.toWei(count, "ether"))
         .send({
-          from: "0xb14f0C2e055F90F0b04c86eeB97Bd7DB6c8B0977",
+          from: currentAcc,
           value: await web3.utils.toWei(
             (count * 0.069).toFixed(3).toString(),
             "ether"
@@ -62,7 +60,7 @@ const Header = () => {
   //   if (web3) {
   //     const contract = new web3.eth.Contract(
   //       contractABI,
-  //       "0x478aDa529CF5bB1260f17F2b5cD82aF76AC03E5a"
+  //       contract_address
   //     );
   //     await contract.methods
   //       .getRestSupply()
@@ -75,6 +73,7 @@ const Header = () => {
   //       });
   //   }
   // };
+  const setMintTime = () => {};
   return (
     <StyledHeader>
       <Image
@@ -104,31 +103,40 @@ const Header = () => {
         width="100%"
         align="center"
         margin="30px 0 0 0"
-        mgap="0 0 20px 0"
+        mgap="0 0 10px 0"
         maxWidth="300px"
         padding="20px 0"
         backdropFilter="blur(10px)"
         borderRadius="20px"
         border={`1px solid ${theme.primaryLight} !important`}
       >
-        <Col margin="10px 0 0 0" align="center">
-          <Row>
+        {currentAcc?.toString() === admin_address?.toString() ? (
+          <Col margin="10px 0 0 0" align="center">
             <DatePicker
               className="date-selector"
               selected={startDate}
               onChange={(date) => setStartDate(date)}
               placeholder="Enter Date"
             />
+
             <TimePicker className="time-selector" placeholder="Enter time" />
-          </Row>
-          <Col align="center" margin="20px 0 0">
-            <Button variant="orchid">
-              <Text fontFamily="Open Sans" fontWeight="bold">
-                Set MintTime
-              </Text>
-            </Button>
+            <Col align="center" margin="20px 0 0">
+              <Button
+                variant="orchid"
+                onClick={() => {
+                  setMintTime();
+                }}
+              >
+                <Text fontFamily="Open Sans" fontWeight="bold">
+                  Set MintTime
+                </Text>
+              </Button>
+            </Col>
           </Col>
-        </Col>
+        ) : (
+          ""
+        )}
+
         <Text
           fontSize="25px"
           fontWeight="500"
@@ -176,6 +184,7 @@ const Header = () => {
         </Text>
         <Button
           variant="lightBlue"
+          disabled={currentAcc ? false : true}
           onClick={() => {
             onMint();
           }}
