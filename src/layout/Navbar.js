@@ -18,6 +18,7 @@ const Navbar = () => {
     // const accounts = await web3.eth.getAccounts();
     // setAccount(accounts[0]);
   };
+
   return (
     <Col
       height="60px"

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 // @import Component
 import { Col, Row } from "../../components/Layout";
 import { Text } from "../../components/Text";
@@ -22,8 +22,14 @@ import backImg from "../../assets/meta.png";
 
 const Header = () => {
   const [startDate, setStartDate] = useState(new Date());
+  const [selledCount, setSelledCount] = useState(0);
   const [count, setCount] = useState(0);
   const { web3 } = useContext(Web3);
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     getBalance();
+  //   }, 1000);
+  // });
   const onMint = async () => {
     if (count > 6) {
       toast.error("Max Mint count is 6");
@@ -52,6 +58,23 @@ const Header = () => {
         });
     }
   };
+  // const getBalance = async () => {
+  //   if (web3) {
+  //     const contract = new web3.eth.Contract(
+  //       contractABI,
+  //       "0x478aDa529CF5bB1260f17F2b5cD82aF76AC03E5a"
+  //     );
+  //     await contract.methods
+  //       .getRestSupply()
+  //       .call()
+  //       .then((res) => {
+  //         setSelledCount(res);
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //       });
+  //   }
+  // };
   return (
     <StyledHeader>
       <Image
@@ -132,7 +155,7 @@ const Header = () => {
           align="center"
           maxWidth="1100px"
         >
-          Total Mint: 0/6969
+          Total Mint: {selledCount}/6969
         </Text>
         <Input
           type="number"
