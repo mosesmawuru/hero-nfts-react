@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 // @import Component
 import { toast, ToastContainer } from "react-toastify";
-import { Col, Row } from "../../components/Layout";
+import { Col } from "../../components/Layout";
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
-import { Image } from "../../components/Image";
 import { Text } from "../../components/Text";
 import DatePicker from "react-datepicker";
 import TimePicker from "rc-time-picker";
@@ -19,8 +18,8 @@ import "rc-time-picker/assets/index.css";
 import { useEthContext } from "../../context/EthereumContext";
 import {
   contract_address,
-  admin_address,
-  client_address,
+  // admin_address,
+  // client_address,
 } from "../../contract/address";
 import { contractABI } from "../../contract/ABI";
 
@@ -75,15 +74,7 @@ const Header = () => {
   // };
   const setMintTime = () => {};
   return (
-    <StyledHeader>
-      <Image
-        src={backImg}
-        position="absolute"
-        top="0"
-        left="0"
-        width="100%"
-        height="100%"
-      />
+    <StyledHeader background={`url(${backImg})`}>
       <Text
         className="header-text"
         fontSize="35px"
@@ -93,6 +84,7 @@ const Header = () => {
         align="center"
         maxWidth="950px"
         padding="0 20px"
+        lineHeight="60px"
       >
         IN THE NEAR FUTURE, LORD ELON PRODUCED CLONES OF HIMSELF TO RULE WORLDS
         ACROSS THE METAVERSE AND BEYOND. THEY BECAME KNOWN AS HEROES OF
@@ -110,7 +102,7 @@ const Header = () => {
         borderRadius="20px"
         border={`1px solid ${theme.primaryLight} !important`}
       >
-        {currentAcc?.toString() === admin_address?.toString() ? (
+        {currentAcc ? (
           <Col margin="10px 0 0 0" align="center">
             <DatePicker
               className="date-selector"

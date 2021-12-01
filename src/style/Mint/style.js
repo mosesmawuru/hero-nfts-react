@@ -3,13 +3,14 @@ import styled from "styled-components";
 export const StyledHeader = styled.div`
   display: flex;
   flex-direction: column;
+  background: ${(props) => props.background || "none"};
+  background-size: 100% 100%;
   width: 100%;
   align-items: center;
   position: relative;
   @media screen and (max-width: 1000px) {
-    .img-background {
-      background-size: cover;
-    }
+    background-size: cover;
+
     .header-text {
       font-size: 30px;
     }
@@ -59,6 +60,7 @@ export const StyledHeader = styled.div`
   }
 `;
 export const HeroGrid = styled.div`
+  transition: 0.3s ease-in-out;
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   gap: 20px;
@@ -80,6 +82,7 @@ export const HeroGrid = styled.div`
   }
 `;
 export const StyledOverview = styled.div`
+  transition: 0.3s ease-in-out;
   display: flex;
   flex-direction: row;
   margin: 20px 0 0 0;
@@ -93,5 +96,62 @@ export const StyledOverview = styled.div`
       align-items: center;
       text-align: center;
     }
+  }
+`;
+export const AnimationView = styled.div`
+  transition: 0.3s ease-in-out;
+  padding: 10px;
+  position: relative;
+  max-width: 800px;
+  & > *:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  @media screen and (max-width: 550px) {
+    .reverse {
+      flex-direction: column-reverse;
+      text-align: right;
+    }
+  }
+`;
+export const StyledMap = styled.div`
+  transition: 0.3s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  .first {
+    text-align: right;
+  }
+  @media screen and (min-width: 550px) {
+    & > *:not(:last-child) {
+      margin-right: 10%;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .first {
+      text-align: left;
+      width: 100%;
+      max-width: 100%;
+    }
+    .second {
+      width: 100%;
+      max-width: 100%;
+    }
+    flex-direction: column;
+  }
+`;
+export const Dot = styled.div`
+  transform: scale(${(props) => (props.scaleSize ? props.scaleSize : 0.2)});
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0px 0px 15px #c5ff00;
+  position: absolute;
+  left: 48.6%;
+  top: 0;
+  z-index: 10;
+  transition: 0.3s ease-in-out;
+  @media screen and (max-width: 850px) {
+    left: 48.3%;
   }
 `;

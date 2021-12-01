@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../theme";
 export const Text = styled.span`
+  transition: 0.3s ease-in-out;
   flex: ${(props) => props.flex || "auto"};
   width: ${(props) => props.width || "auto"};
   margin: ${(props) => props.margin || "0"};
@@ -16,6 +17,7 @@ export const Text = styled.span`
   white-space: ${(props) => props.whiteSpace || "none"};
   text-overflow: ${(props) => props.textOverflow || "none"};
   overflow: ${(props) => props.overflow || "none"};
+  opacity: ${(props) => props.opacity || "1"};
   background: ${(props) => props.background || "none"};
   cursor: ${(props) => props.cursor || "unset"};
   z-index: ${(props) => props.zIndex || 0} !important;
