@@ -82,7 +82,7 @@ const Roadmap = () => {
             color={theme.bgLightBlue}
             width="50%"
             maxWidth="50%"
-            className="first"
+            className="first uppercase"
             opacity={"1"}
           >
             Welcome
@@ -123,6 +123,7 @@ const Roadmap = () => {
             width="50%"
             maxWidth="50%"
             opacity={"1"}
+            className="uppercase"
           >
             Marketing campaigns
           </Text>
@@ -135,7 +136,7 @@ const Roadmap = () => {
             color={theme.bgLightBlue}
             width="50%"
             maxWidth="50%"
-            className="first"
+            className="first uppercase"
             opacity={"1"}
           >
             Rewards
@@ -175,6 +176,7 @@ const Roadmap = () => {
             width="50%"
             maxWidth="50%"
             opacity={"1"}
+            className="uppercase"
           >
             Merch
           </Text>
@@ -187,7 +189,7 @@ const Roadmap = () => {
             color={theme.bgLightBlue}
             width="50%"
             maxWidth="50%"
-            className="first"
+            className="first uppercase"
             opacity={"1"}
           >
             Cmmunity
@@ -207,37 +209,6 @@ const Roadmap = () => {
           </Text>
         </StyledMap>
       </AnimationView>
-      {/* <Col
-        maxWidth="1300px"
-        mgap="0 0 10px 0"
-        margin="20px 0 50px 0"
-        padding="0 30px"
-        width="calc(100% - 60px)"
-        ref={myRef}
-      >
-        <Text fontSize="24px" fontWeight="500">
-          1) Once all 6969 unique NFTs have been minted, we will be giving away
-          the value of a tesla Model 3 in Eth to 5 random wallets. Each purchase
-          is a single entry, but each wallet can only win once.
-        </Text>
-        <Text fontSize="24px" fontWeight="500">
-          2) We want this project to be about community. Joining the society
-          will grant access to exclusive content, events, and meetups each year.
-        </Text>
-        <Text fontSize="24px" fontWeight="500">
-          3) Owning a Hero will grant exclusive minting access to a
-          complimentary wives collection. With breeding children on the horizon.
-        </Text>
-        <Text fontSize="24px" fontWeight="500">
-          4) Owning HOES grants voting rights in the direction of the project.
-          We want to empower our community and allow them to take action.
-        </Text>
-        <Text fontSize="24px" fontWeight="500">
-          5) Don’t want to spoil too much but we plan to establish various
-          businesses in the metaverse, beginning in Decentraland. All profits
-          from these various business will 100% be redistributed to holders of
-        </Text>
-      </Col> */}
     </Col>
   );
 };

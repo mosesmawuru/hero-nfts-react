@@ -47,10 +47,10 @@ export const StyledHeader = styled.div`
     font-weight: bold;
   }
   .appt-time {
-    width: 220px;
+    width: 200px;
     border: none;
     outline: none;
-    padding: 8px 0;
+    padding: 8px 10px;
     border-radius: 10px;
     font-weight: bold;
     font-size: 1rem;
@@ -139,6 +139,9 @@ export const AnimationView = styled.div`
     .reverse {
       flex-direction: column-reverse;
       text-align: right;
+    }
+    .uppercase {
+      font-size: 24px;
     }
   }
 `;
