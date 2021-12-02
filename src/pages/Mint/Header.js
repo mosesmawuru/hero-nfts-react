@@ -55,29 +55,33 @@ const Header = () => {
     }
   };
   const setMintTime = async () => {
-    const time = startTime.split(":");
-    const sendTime = new Date(
-      new Date(startDate).getFullYear(),
-      new Date(startDate).getMonth() + 1,
-      new Date(startDate).getDate(),
-      Number(time[0]),
-      Number(time[1]),
-      Number(time[2])
-    ).valueOf();
-    console.log(sendTime);
-    const contract = new web3.eth.Contract(contractABI, contract_address);
-    await contract.methods
-      .setMintTime(sendTime)
-      .send({
-        from: currentAcc,
-        value: "0",
-      })
-      .then((res) => {
-        toast("Success!");
-      })
-      .catch((err) => {
-        toast(err);
-      });
+    if (startTime) {
+      const time = startTime.split(":");
+      const sendTime = new Date(
+        new Date(startDate).getFullYear(),
+        new Date(startDate).getMonth() + 1,
+        new Date(startDate).getDate(),
+        Number(time[0]),
+        Number(time[1]),
+        Number(time[2])
+      ).valueOf();
+      console.log(sendTime);
+      const contract = new web3.eth.Contract(contractABI, contract_address);
+      await contract.methods
+        .setMintTime(sendTime)
+        .send({
+          from: currentAcc,
+          value: "0",
+        })
+        .then((res) => {
+          toast.success("Successfully settled the mint start time.");
+        })
+        .catch((err) => {
+          toast.error(err);
+        });
+    } else {
+      toast.error("Please check mint starting time.");
+    }
   };
   // const getBalance = async () => {
   //   if (web3) {
@@ -143,9 +147,10 @@ const Header = () => {
               placeholder="Enter Date"
             />
 
-            <Col align="center" margin="20px 0 0 0">
+            <Col margin="20px 0 0 0" align="center">
               <input
                 id="appt-time"
+                className="appt-time"
                 type="time"
                 name="appt-time"
                 step="2"
@@ -202,8 +207,7 @@ const Header = () => {
           type="number"
           placeholder="Enter mint count"
           padding="10px 10px"
-          min="0"
-          max="6"
+          maxWidth="100px"
           value={count}
           onChange={(e) => {
             onChangeCount(e.target.value);

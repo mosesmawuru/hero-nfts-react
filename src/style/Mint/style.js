@@ -28,8 +28,9 @@ export const StyledHeader = styled.div`
   }
   .date-selector {
     padding: 10px;
+
     border-radius: 10px;
-    width: 100px;
+    width: 200px;
     border: none;
     font-size: 1rem;
     font-weight: bold;
@@ -45,15 +46,18 @@ export const StyledHeader = styled.div`
     outline: none;
     font-weight: bold;
   }
-  .time-selector {
-    margin-top: 20px;
-    width: 120px;
+  .appt-time {
+    width: 220px;
     border: none;
     outline: none;
+    padding: 8px 0;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
   }
   .rc-time-picker-input {
     font-weight: bold;
-    font-size: 1rem;
+
     height: 38px;
   }
   & > *:not(:last-child) {

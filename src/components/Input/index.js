@@ -4,6 +4,7 @@ import { theme } from "../../theme";
 export const Input = styled.input`
   z-index: 1;
   width: ${(props) => props.width || "auto"};
+  max-width: ${(props) => props.maxWidth || "auto"};
   height: ${(props) => props.height || "auto"};
   font-size: ${(props) => props.fontSize || "1rem"};
   font-weight: ${(props) => props.fontWeight || "bold"};
