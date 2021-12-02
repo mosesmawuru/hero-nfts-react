@@ -52,7 +52,7 @@ const Roadmap = () => {
   };
 
   return (
-    <Col backgroundColor={theme.nftitem} align="center">
+    <Col className="xxx" backgroundColor={theme.nftitem} align="center">
       <Text
         fontSize="55px"
         fontWeight="bold"
@@ -68,8 +68,8 @@ const Roadmap = () => {
           <div
             style={{
               width: "100%",
-              backgroundColor: "#09E894",
-              height: `calc(100%)`,
+              backgroundColor: `${theme.bgLightBlue}`,
+              height: `calc(80%)`,
             }}
           ></div>
         </Progress>
@@ -79,7 +79,7 @@ const Roadmap = () => {
           <Text
             fontSize="30px"
             fontWeight="bold"
-            color="#09E894"
+            color={theme.bgLightBlue}
             width="50%"
             maxWidth="50%"
             className="first"
@@ -119,7 +119,7 @@ const Roadmap = () => {
           <Text
             fontSize="30px"
             fontWeight="bold"
-            color="#09E894"
+            color={theme.bgLightBlue}
             width="50%"
             maxWidth="50%"
             opacity={"1"}
@@ -132,7 +132,7 @@ const Roadmap = () => {
           <Text
             fontSize="30px"
             fontWeight="bold"
-            color="#09E894"
+            color={theme.bgLightBlue}
             width="50%"
             maxWidth="50%"
             className="first"
@@ -171,7 +171,7 @@ const Roadmap = () => {
           <Text
             fontSize="30px"
             fontWeight="bold"
-            color="#09E894"
+            color={theme.bgLightBlue}
             width="50%"
             maxWidth="50%"
             opacity={"1"}
@@ -184,7 +184,7 @@ const Roadmap = () => {
           <Text
             fontSize="30px"
             fontWeight="bold"
-            color="#09E894"
+            color={theme.bgLightBlue}
             width="50%"
             maxWidth="50%"
             className="first"

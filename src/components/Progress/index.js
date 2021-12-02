@@ -10,6 +10,8 @@ export const Progress = styled.div`
   height: 100%;
   z-index: 3;
   @media screen and (max-width: 550px) {
-    position: relative;
+    position: absolute;
+    top: -15px;
+    left: 20px;
   }
 `;

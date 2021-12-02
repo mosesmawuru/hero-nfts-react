@@ -6,17 +6,13 @@ import Web3 from "web3";
 import { EthereumContext } from "./context/EthereumContext";
 // @import component
 import Loading from "./components/Loading";
-// import ScrollTop from "./components/ScrollTop";
+import ScrollTop from "./components/ScrollTop";
 // @import layout
 const AppLayout = React.lazy(() => import("./layout/AppLayout"));
 // @import pages
 const MintPage = React.lazy(() => import("./pages/Mint"));
 
 function App() {
-  const data = [{ ff: "fff" }, { ff222: "fff" }];
-  const dddd = [{ ff: "ddd" }];
-  const se = data.concat(dddd);
-  console.log(se);
   const [provider, setProvider] = useState(null);
   const [web3, setWeb3] = useState(null);
   const [accounts, setAccounts] = useState([]);

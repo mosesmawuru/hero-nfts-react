@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../theme";
 
 export const StyledHeader = styled.div`
   display: flex;
@@ -59,6 +60,7 @@ export const StyledHeader = styled.div`
     margin-bottom: 30px;
   }
 `;
+
 export const HeroGrid = styled.div`
   transition: 0.3s ease-in-out;
   display: grid;
@@ -78,6 +80,28 @@ export const HeroGrid = styled.div`
     img {
       width: 130px;
       height: 170px;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    gap: 10px;
+    img {
+      width: 115px;
+      height: 150px;
+    }
+  }
+`;
+export const OverviewSection = styled.div`
+  width: 100%;
+  @media screen and (max-width: 850px) {
+    .overview_header {
+      font-size: 30px;
+      text-align: center;
+      padding: 0 10px;
+    }
+    .describe_header {
+      width: 100%;
+      font-size: 23px;
+      text-align: center;
     }
   }
 `;
@@ -107,6 +131,7 @@ export const AnimationView = styled.div`
     margin-bottom: 50px;
   }
   @media screen and (max-width: 550px) {
+    padding: 10px 10px 10px 50px;
     .reverse {
       flex-direction: column-reverse;
       text-align: right;
@@ -127,6 +152,10 @@ export const StyledMap = styled.div`
     }
   }
   @media screen and (max-width: 550px) {
+    span {
+      width: 100%;
+      max-width: 100%;
+    }
     .first {
       text-align: left;
       width: 100%;
@@ -145,7 +174,7 @@ export const Dot = styled.div`
   height: 18px;
   border-radius: 50%;
   background: #fff;
-  box-shadow: 0px 0px 15px #c5ff00;
+  box-shadow: 0px 0px 15px ${theme.bgOrange};
   position: absolute;
   left: 48.6%;
   top: 0;
@@ -153,5 +182,8 @@ export const Dot = styled.div`
   transition: 0.3s ease-in-out;
   @media screen and (max-width: 850px) {
     left: 48.3%;
+  }
+  @media screen and (max-width: 550px) {
+    left: -37px;
   }
 `;

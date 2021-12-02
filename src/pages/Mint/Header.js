@@ -6,8 +6,6 @@ import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
 import { Text } from "../../components/Text";
 import DatePicker from "react-datepicker";
-import TimePicker from "rc-time-picker";
-
 // @import assets
 import { StyledHeader } from "../../style/Mint/style";
 import { theme } from "../../theme";
@@ -28,6 +26,7 @@ import backImg from "../../assets/meta.png";
 
 const Header = () => {
   const [startDate, setStartDate] = useState(new Date());
+  const [startTime, setStartTime] = useState("");
   const [selledCount, setSelledCount] = useState(0);
   const [count, setCount] = useState(0);
   const { web3, currentAcc } = useEthContext();
@@ -55,6 +54,31 @@ const Header = () => {
         });
     }
   };
+  const setMintTime = async () => {
+    const time = startTime.split(":");
+    const sendTime = new Date(
+      new Date(startDate).getFullYear(),
+      new Date(startDate).getMonth() + 1,
+      new Date(startDate).getDate(),
+      Number(time[0]),
+      Number(time[1]),
+      Number(time[2])
+    ).valueOf();
+    console.log(sendTime);
+    const contract = new web3.eth.Contract(contractABI, contract_address);
+    await contract.methods
+      .setMintTime(sendTime)
+      .send({
+        from: currentAcc,
+        value: "0",
+      })
+      .then((res) => {
+        toast("Success!");
+      })
+      .catch((err) => {
+        toast(err);
+      });
+  };
   // const getBalance = async () => {
   //   if (web3) {
   //     const contract = new web3.eth.Contract(
@@ -72,7 +96,15 @@ const Header = () => {
   //       });
   //   }
   // };
-  const setMintTime = () => {};
+  const onChangeCount = (num) => {
+    setCount(num);
+    if (num >= 1 && 6 >= num) {
+      setCount(num);
+    } else {
+      setCount(num);
+    }
+  };
+
   return (
     <StyledHeader background={`url(${backImg})`}>
       <Text
@@ -111,7 +143,16 @@ const Header = () => {
               placeholder="Enter Date"
             />
 
-            <TimePicker className="time-selector" placeholder="Enter time" />
+            <Col align="center" margin="20px 0 0 0">
+              <input
+                id="appt-time"
+                type="time"
+                name="appt-time"
+                step="2"
+                value={startTime}
+                onChange={(e) => setStartTime(e.target.value)}
+              />
+            </Col>
             <Col align="center" margin="20px 0 0">
               <Button
                 variant="orchid"
@@ -161,10 +202,14 @@ const Header = () => {
           type="number"
           placeholder="Enter mint count"
           padding="10px 10px"
+          min="0"
+          max="6"
+          value={count}
           onChange={(e) => {
-            setCount(e.target.value);
+            onChangeCount(e.target.value);
           }}
         />
+
         <Text
           fontSize="25px"
           fontWeight="500"
