@@ -65,10 +65,9 @@ const Header = () => {
         Number(time[1]),
         Number(time[2])
       ).valueOf();
-      console.log(sendTime);
       const contract = new web3.eth.Contract(contractABI, contract_address);
       await contract.methods
-        .setMintTime(sendTime)
+        .setMintTime(sendTime / 1000)
         .send({
           from: currentAcc,
           value: "0",
@@ -121,6 +120,7 @@ const Header = () => {
         maxWidth="950px"
         padding="0 20px"
         lineHeight="60px"
+        wordBreak="break-word"
       >
         IN THE NEAR FUTURE, LORD ELON PRODUCED CLONES OF HIMSELF TO RULE WORLDS
         ACROSS THE METAVERSE AND BEYOND. THEY BECAME KNOWN AS HEROES OF
@@ -165,7 +165,7 @@ const Header = () => {
                   setMintTime();
                 }}
               >
-                <Text fontFamily="Open Sans" fontWeight="bold">
+                <Text fontFamily="Aladin" fontSize="20px" fontWeight="500">
                   Set MintTime
                 </Text>
               </Button>
@@ -190,7 +190,6 @@ const Header = () => {
           fontWeight="500"
           fontFamily="Aladin"
           align="center"
-          maxWidth="1100px"
         >
           Max Mint Per Wallet: 6
         </Text>
@@ -199,15 +198,15 @@ const Header = () => {
           fontWeight="500"
           fontFamily="Aladin"
           align="center"
-          maxWidth="1100px"
         >
           Total Mint: {selledCount}/6969
         </Text>
         <Input
           type="number"
           placeholder="Enter mint count"
+          disabled={currentAcc ? false : true}
           padding="10px 10px"
-          maxWidth="100px"
+          maxWidth="160px"
           value={count}
           onChange={(e) => {
             onChangeCount(e.target.value);
@@ -230,7 +229,7 @@ const Header = () => {
             onMint();
           }}
         >
-          <Text fontFamily="Open Sans" fontWeight="bold">
+          <Text fontFamily="Aladin" fontSize="20px" fontWeight="500">
             Mint
           </Text>
         </Button>

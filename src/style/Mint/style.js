@@ -24,11 +24,11 @@ export const StyledHeader = styled.div`
   @media screen and (max-width: 500px) {
     .header-text {
       font-size: 20px;
+      line-height: 40px;
     }
   }
   .date-selector {
     padding: 10px;
-
     border-radius: 10px;
     width: 200px;
     border: none;
@@ -142,6 +142,7 @@ export const AnimationView = styled.div`
     }
     .uppercase {
       font-size: 24px;
+      word-break: break-word;
     }
   }
 `;

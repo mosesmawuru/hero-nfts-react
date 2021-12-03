@@ -6,7 +6,7 @@ import Web3 from "web3";
 import { EthereumContext } from "./context/EthereumContext";
 // @import component
 import Loading from "./components/Loading";
-import ScrollTop from "./components/ScrollTop";
+
 // @import layout
 const AppLayout = React.lazy(() => import("./layout/AppLayout"));
 // @import pages
@@ -31,6 +31,12 @@ function App() {
   }, []);
 
   useEffect(() => {
+    const setCurrentlyConnectedAccount = async () => {
+      let accounts = await web3.eth.getAccounts();
+      if (accounts && accounts.length > 0) {
+        setCurrentAcc(accounts[0]);
+      }
+    };
     if (web3) {
       setCurrentlyConnectedAccount();
     }
@@ -52,13 +58,6 @@ function App() {
     }
   };
 
-  const setCurrentlyConnectedAccount = async () => {
-    let accounts = await web3.eth.getAccounts();
-    if (accounts && accounts.length > 0) {
-      console.log(accounts[0]);
-      setCurrentAcc(accounts[0]);
-    }
-  };
   return (
     <EthereumContext.Provider
       value={{

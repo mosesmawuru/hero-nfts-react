@@ -7,7 +7,7 @@ export const Text = styled.span`
   margin: ${(props) => props.margin || "0"};
   padding: ${(props) => props.padding || "0"};
   font-size: ${(props) => props.fontSize || "1rem"};
-  font-family: ${(props) => props.fontFamily || "Open Sans"};
+  font-family: ${(props) => props.fontFamily || "Montserrat"};
   font-weight: ${(props) => props.fontWeight || "0"};
   line-height: ${(props) => props.lineHeight || "auto"};
   color: ${(props) => props.color || theme.white};
@@ -24,5 +24,5 @@ export const Text = styled.span`
   top: ${(props) => props.top};
   left: ${(props) => props.left};
   transform: ${(props) => props.rotate || "rotate(0)"};
-  word-wrap: break-word;
+  word-break: ${(props) => props.wordBreak};
 `;

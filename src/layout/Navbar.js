@@ -8,8 +8,22 @@ import { Row, Col } from "../components/Layout";
 import { Text } from "../components/Text";
 import { Button } from "../components/Button";
 // @import style
+import styled from "styled-components";
 import { theme } from "../theme";
-
+const SocialLink = styled.a`
+  border-radius: 100%;
+  padding: 8px;
+  width: 33px;
+  height: 33px;
+  background-color: ${theme.bgRoyalBlue};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: 400px) {
+    width: 20px;
+    height: 20px;
+  }
+`;
 const Navbar = () => {
   const { provider, currentAcc } = useEthContext();
   const handleConnectWallet = async () => {
@@ -26,15 +40,15 @@ const Navbar = () => {
     >
       <Row justify="space-between" width="100%" maxWidth="1300px">
         <Row mgap="0 10px 0 0">
-          <a href="https://twitter.com/HOESNFT">
-            <FaTwitter color={theme.primaryLight} size="30" />
-          </a>
-          <a href="https://www.instagram.com/hoesnft">
-            <FaInstagram color={theme.primaryLight} size="30" />
-          </a>
-          <a href="https://discord.gg/4VbaqFHP">
-            <FaDiscord color={theme.primaryLight} size="30" />
-          </a>
+          <SocialLink href="https://twitter.com/HOESNFT">
+            <FaTwitter color={theme.primaryLight} size="25" />
+          </SocialLink>
+          <SocialLink href="https://www.instagram.com/hoesnft">
+            <FaInstagram color={theme.primaryLight} size="25" />
+          </SocialLink>
+          <SocialLink href="https://discord.gg/4VbaqFHP">
+            <FaDiscord color={theme.primaryLight} size="25" />
+          </SocialLink>
         </Row>
         <Button
           variant="royalBlue"

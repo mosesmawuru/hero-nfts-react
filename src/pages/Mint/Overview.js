@@ -12,7 +12,7 @@ import Logo4 from "../../assets/NFT/4.jpg";
 const Overview = () => {
   return (
     <OverviewSection>
-      <Col backgroundColor={theme.primaryDark} align="center">
+      <Col backgroundColor={theme.nftitem} align="center">
         <Col align="center" maxWidth="1300px" margin="0 0 40px 0">
           <Text
             fontSize="55px"
@@ -21,18 +21,19 @@ const Overview = () => {
             margin="30px 0 0"
             padding="0 40px"
             className="overview_header"
+            wordBreak="break-word"
           >
             Meet the Heroes of Extraterrestrial Societies
           </Text>
           <StyledOverview>
             <Col>
-              <Text
+              {/* <Text
                 fontSize="30px"
                 fontWeight="700"
                 className="describe_header"
               >
                 Meet the Heroes of Extraterrestrial Societies
-              </Text>
+              </Text> */}
 
               <Text fontSize="20px" fontWeight="500" margin="20px 0 0 0">
                 The Heroes of Extraterrestrial Societies is a collection of 6969

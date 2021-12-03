@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 import { IoIosArrowUp } from "react-icons/io";
+import { theme } from "../../theme";
 
 /**
  * @define Styled-components
@@ -39,8 +40,8 @@ const ButtonDiv = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background-color: #f7b40350;
-  box-shadow: 0 0 10px #f7b403;
+  background-color: ${theme.bgLightBlue};
+  box-shadow: 0 0 10px ${theme.bgLightBlueHover};
   border-radius: 50%;
   font-size: 16px;
   color: white;
