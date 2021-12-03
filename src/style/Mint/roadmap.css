@@ -1,0 +1,128 @@
+.sec-padd {
+  padding: 100px 0px;
+}
+.timeline-in h4 {
+  color: rgb(45, 129, 255);
+  font-weight: bold;
+  font-size: 30px;
+}
+.timeline-in p {
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+}
+.timeline ul {
+  position: relative;
+  max-width: 850px;
+  margin: 0px auto;
+  list-style: none;
+  padding: 60px 0px;
+}
+.timeline ul .default-line {
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  background: #424443;
+  top: 0;
+  height: 100%;
+}
+.timeline ul .draw-line {
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  background: rgb(45, 129, 255);
+  top: 0;
+}
+.timeline ul .timeline-in {
+  display: flex;
+  position: relative;
+}
+.timeline ul li .timeline-left,
+.timeline ul li .timeline-right {
+  width: 45%;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.timeline ul li.in-view .timeline-left,
+.timeline ul li.in-view .timeline-right {
+  opacity: 1;
+}
+.timeline ul li .timeline-right {
+  margin-left: auto;
+}
+.timeline ul li .timeline-left {
+  text-align: right;
+}
+.timeline ul li {
+  margin-bottom: 60px;
+}
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+.timeline ul li .timeline-in:after {
+  content: "";
+  transform: scale(0.2);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0px 0px 15px rgb(3, 117, 117);
+  position: absolute;
+  left: 49.2%;
+  top: 0;
+  transition: 0.3s ease-in-out;
+}
+.timeline ul li.in-view .timeline-in:after {
+  transform: scale(1.2);
+}
+
+@media only screen and (max-width: 1100px) {
+  .container {
+    max-width: 100%;
+    padding: 0px 30px;
+  }
+  .sec-padd {
+    padding: 70px 0px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .sec-padd {
+    padding: 60px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .sec-padd {
+    padding: 50px 0px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .sec-padd {
+    padding: 40px 0px;
+  }
+  .container {
+    padding: 0px 15px;
+  }
+
+  .timeline ul .default-line,
+  .timeline ul .draw-line {
+    left: 15px;
+  }
+  .timeline ul li .timeline-in::after {
+    left: -42px;
+  }
+  .timeline ul .timeline-in {
+    display: block;
+  }
+  .timeline ul li .timeline-left,
+  .timeline ul li .timeline-right {
+    width: 100%;
+    text-align: left;
+  }
+  .timeline ul li {
+    padding-left: 50px;
+  }
+  .timeline ul li:nth-child(even) .timeline-in {
+    display: inline-flex;
+    flex-direction: column-reverse;
+  }
+}

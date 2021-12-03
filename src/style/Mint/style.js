@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from "../../theme";
 
 export const StyledHeader = styled.div`
   display: flex;
@@ -124,74 +123,5 @@ export const StyledOverview = styled.div`
       align-items: center;
       text-align: center;
     }
-  }
-`;
-export const AnimationView = styled.div`
-  transition: 0.3s ease-in-out;
-  padding: 10px;
-  position: relative;
-  max-width: 800px;
-  & > *:not(:last-child) {
-    margin-bottom: 50px;
-  }
-  @media screen and (max-width: 550px) {
-    padding: 10px 10px 10px 50px;
-    .reverse {
-      flex-direction: column-reverse;
-      text-align: right;
-    }
-    .uppercase {
-      font-size: 24px;
-      word-break: break-word;
-    }
-  }
-`;
-export const StyledMap = styled.div`
-  transition: 0.3s ease-in-out;
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  .first {
-    text-align: right;
-  }
-  @media screen and (min-width: 550px) {
-    & > *:not(:last-child) {
-      margin-right: 10%;
-    }
-  }
-  @media screen and (max-width: 550px) {
-    span {
-      width: 100%;
-      max-width: 100%;
-    }
-    .first {
-      text-align: left;
-      width: 100%;
-      max-width: 100%;
-    }
-    .second {
-      width: 100%;
-      max-width: 100%;
-    }
-    flex-direction: column;
-  }
-`;
-export const Dot = styled.div`
-  transform: scale(${(props) => (props.scaleSize ? props.scaleSize : 0.2)});
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0px 0px 15px ${theme.bgOrange};
-  position: absolute;
-  left: 48.6%;
-  top: 0;
-  z-index: 10;
-  transition: 0.3s ease-in-out;
-  @media screen and (max-width: 850px) {
-    left: 48.3%;
-  }
-  @media screen and (max-width: 550px) {
-    left: -37px;
   }
 `;

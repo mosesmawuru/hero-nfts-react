@@ -27,7 +27,7 @@ import backImg from "../../assets/meta.png";
 const Header = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [startTime, setStartTime] = useState("");
-  const [selledCount, setSelledCount] = useState(0);
+  // const [selledCount, setSelledCount] = useState(0);
   const [count, setCount] = useState(0);
   const { web3, currentAcc } = useEthContext();
   const onMint = async () => {
@@ -199,7 +199,7 @@ const Header = () => {
           fontFamily="Aladin"
           align="center"
         >
-          Total Mint: {selledCount}/6969
+          Total Mint: 0/6969
         </Text>
         <Input
           type="number"
