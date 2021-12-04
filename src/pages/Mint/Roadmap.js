@@ -50,28 +50,6 @@ const Roadmap = () => {
     });
   };
 
-  // const calculateScrollDistance = () => {
-  //   const scrollTop = window.pageYOffset; // how much the user has scrolled by
-  //   const winHeight = window.innerHeight;
-  //   const docHeight = getDocHeight();
-
-  //   const totalDocScrollLength = docHeight - winHeight;
-  //   const scrollPostion = Math.floor((scrollTop / totalDocScrollLength) * 100);
-
-  //   setPosition(scrollPostion);
-  // };
-
-  // const getDocHeight = () => {
-  //   return Math.max(
-  //     document.body.scrollHeight,
-  //     document.documentElement.scrollHeight,
-  //     document.body.offsetHeight,
-  //     document.documentElement.offsetHeight,
-  //     document.body.clientHeight,
-  //     document.documentElement.clientHeight
-  //   );
-  // };
-
   return (
     <Col className="xxx" backgroundColor={theme.nftitem} align="center">
       <Text
@@ -94,11 +72,11 @@ const Roadmap = () => {
               <li className="in-view">
                 <div className="timeline-in">
                   <div className="timeline-left">
-                    <h4>Welcome</h4>
+                    <h4>Giving Back</h4>
                   </div>
                   <div className="timeline-right">
                     <p>
-                      1) Once all 6969 unique NFTs have been minted, we will be
+                      Once all 6969 unique NFTs have been minted, we will be
                       giving away the value of a tesla Model 3 in Eth to 5
                       random wallets. Each purchase is a single entry, but each
                       wallet can only win once.
@@ -110,13 +88,13 @@ const Roadmap = () => {
                 <div className="timeline-in">
                   <div className="timeline-left">
                     <p>
-                      2)We want this project to be about community. Joining the
+                      We want this project to be about community. Joining the
                       society will grant access to exclusive content, events,
                       and meetups each year.
                     </p>
                   </div>
                   <div className="timeline-right">
-                    <h4>Marketing campaigns</h4>
+                    <h4>Community exclusives</h4>
                   </div>
                 </div>
               </li>
@@ -127,7 +105,7 @@ const Roadmap = () => {
                   </div>
                   <div className="timeline-right">
                     <p>
-                      3)Owning a Hero will grant exclusive minting access to a
+                      Owning a Hero will grant exclusive minting access to a
                       complimentary wives collection. With breeding children on
                       the horizon.
                     </p>
@@ -138,24 +116,24 @@ const Roadmap = () => {
                 <div className="timeline-in">
                   <div className="timeline-left">
                     <p>
-                      4)Owning HOES grants voting rights in the direction of the
+                      Owning HOES grants voting rights in the direction of the
                       project. We want to empower our community and allow them
                       to take action.
                     </p>
                   </div>
                   <div className="timeline-right">
-                    <h4>Merch</h4>
+                    <h4>Power</h4>
                   </div>
                 </div>
               </li>
               <li className="">
                 <div className="timeline-in">
                   <div className="timeline-left">
-                    <h4>Giveaways </h4>
+                    <h4>Metaverse corporation </h4>
                   </div>
                   <div className="timeline-right">
                     <p>
-                      5) Don’t want to spoil too much but we plan to establish
+                      Don’t want to spoil too much but we plan to establish
                       various businesses in the metaverse, beginning in
                       Decentraland. All profits from these various business will
                       100% be redistributed to holders of

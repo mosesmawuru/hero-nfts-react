@@ -114,7 +114,7 @@ export const StyledOverview = styled.div`
   flex-direction: row;
   margin: 20px 0 0 0;
   padding: 0 40px;
-  align-items: flex-start;
+  align-items: center;
   @media screen and (max-width: 850px) {
     padding: 0 20px;
     flex-direction: column;

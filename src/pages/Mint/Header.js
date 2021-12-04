@@ -22,7 +22,7 @@ import {
 import { contractABI } from "../../contract/ABI";
 
 // @import assets
-import backImg from "../../assets/meta.png";
+import backImg from "../../assets/background.jpg";
 
 const Header = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -165,7 +165,7 @@ const Header = () => {
                   setMintTime();
                 }}
               >
-                <Text fontFamily="Aladin" fontSize="20px" fontWeight="500">
+                <Text fontSize="20px" fontWeight="bold">
                   Set MintTime
                 </Text>
               </Button>
@@ -229,7 +229,7 @@ const Header = () => {
             onMint();
           }}
         >
-          <Text fontFamily="Aladin" fontSize="20px" fontWeight="500">
+          <Text fontSize="20px" fontWeight="bold">
             Mint
           </Text>
         </Button>
