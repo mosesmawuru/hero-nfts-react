@@ -64,35 +64,6 @@ export const StyledHeader = styled.div`
   }
 `;
 
-export const HeroGrid = styled.div`
-  transition: 0.3s ease-in-out;
-  display: grid;
-  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-  gap: 20px;
-  margin-left: 30px;
-  @media screen and (max-width: 850px) {
-    margin-left: 0px;
-    margin-top: 30px;
-    grid-template: repeat(1, 1fr) / repeat(4, 1fr);
-  }
-  @media screen and (max-width: 750px) {
-    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-  }
-  @media screen and (max-width: 400px) {
-    gap: 10px;
-    img {
-      width: 130px;
-      height: 170px;
-    }
-  }
-  @media screen and (max-width: 320px) {
-    gap: 10px;
-    img {
-      width: 115px;
-      height: 150px;
-    }
-  }
-`;
 export const OverviewSection = styled.div`
   width: 100%;
   @media screen and (max-width: 850px) {
@@ -111,17 +82,31 @@ export const OverviewSection = styled.div`
 export const StyledOverview = styled.div`
   transition: 0.3s ease-in-out;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: 20px 0 0 0;
   padding: 0 40px;
   align-items: center;
   @media screen and (max-width: 850px) {
     padding: 0 20px;
-    flex-direction: column;
+
     align-items: center;
     .overview {
       align-items: center;
       text-align: center;
+    }
+  }
+`;
+export const StyledTeam = styled.div`
+  width: 100%;
+  @media screen and (max-width: 750px) {
+    .team_grid {
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr) !important;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .team_grid {
+      gap: 50px !important;
+      grid-template: repeat(4, 1fr) / repeat(1, 1fr) !important;
     }
   }
 `;

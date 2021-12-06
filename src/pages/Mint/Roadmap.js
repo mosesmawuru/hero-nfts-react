@@ -75,23 +75,23 @@ const Roadmap = () => {
                     <h4>Giving Back</h4>
                   </div>
                   <div className="timeline-right">
-                    <p>
+                    <Text fontSize="20px" fontWeight="bold">
                       Once all 6969 unique NFTs have been minted, we will be
                       giving away the value of a tesla Model 3 in Eth to 5
                       random wallets. Each purchase is a single entry, but each
                       wallet can only win once.
-                    </p>
+                    </Text>
                   </div>
                 </div>
               </li>
               <li className="in-view">
                 <div className="timeline-in">
                   <div className="timeline-left">
-                    <p>
+                    <Text fontSize="20px" fontWeight="bold">
                       We want this project to be about community. Joining the
                       society will grant access to exclusive content, events,
                       and meetups each year.
-                    </p>
+                    </Text>
                   </div>
                   <div className="timeline-right">
                     <h4>Community exclusives</h4>
@@ -104,22 +104,22 @@ const Roadmap = () => {
                     <h4>Rewards </h4>
                   </div>
                   <div className="timeline-right">
-                    <p>
+                    <Text fontSize="20px" fontWeight="bold">
                       Owning a Hero will grant exclusive minting access to a
                       complimentary wives collection. With breeding children on
                       the horizon.
-                    </p>
+                    </Text>
                   </div>
                 </div>
               </li>
               <li className="">
                 <div className="timeline-in">
                   <div className="timeline-left">
-                    <p>
+                    <Text fontSize="20px" fontWeight="bold">
                       Owning HOES grants voting rights in the direction of the
                       project. We want to empower our community and allow them
                       to take action.
-                    </p>
+                    </Text>
                   </div>
                   <div className="timeline-right">
                     <h4>Power</h4>
@@ -132,12 +132,12 @@ const Roadmap = () => {
                     <h4>Metaverse corporation </h4>
                   </div>
                   <div className="timeline-right">
-                    <p>
+                    <Text fontSize="20px" fontWeight="bold">
                       Don’t want to spoil too much but we plan to establish
                       various businesses in the metaverse, beginning in
                       Decentraland. All profits from these various business will
                       100% be redistributed to holders of
-                    </p>
+                    </Text>
                   </div>
                 </div>
               </li>

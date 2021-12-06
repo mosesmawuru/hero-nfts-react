@@ -4,9 +4,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // @import wallet connection
 import Web3 from "web3";
 import { EthereumContext } from "./context/EthereumContext";
+
 // @import component
 import Loading from "./components/Loading";
 
+// @import swiper style
+
+// import "swiper/css";
 // @import layout
 const AppLayout = React.lazy(() => import("./layout/AppLayout"));
 // @import pages

@@ -1,14 +1,17 @@
 import React from "react";
+// import { Swiper, SwiperSlide } from "swiper/react";
+
 import { Col } from "../../components/Layout";
 import { Text } from "../../components/Text";
-import { Image } from "../../components/Image";
-import { HeroGrid } from "../../style/Mint/style";
+// import { Image } from "../../components/Image";
+
 import { theme } from "../../theme";
 import { OverviewSection, StyledOverview } from "../../style/Mint/style";
-import Logo1 from "../../assets/NFT/1.jpg";
-import Logo2 from "../../assets/NFT/2.jpg";
-import Logo3 from "../../assets/NFT/3.jpg";
-import Logo4 from "../../assets/NFT/4.jpg";
+
+// import Logo1 from "../../assets/NFT/1.jpg";
+// import Logo2 from "../../assets/NFT/2.jpg";
+// import Logo3 from "../../assets/NFT/3.jpg";
+// import Logo4 from "../../assets/NFT/4.jpg";
 const Overview = () => {
   return (
     <OverviewSection>
@@ -23,18 +26,10 @@ const Overview = () => {
             className="overview_header"
             wordBreak="break-word"
           >
-            Meet the Heroes of Extraterrestrial Societies
+            Meet the Heroes
           </Text>
           <StyledOverview>
             <Col>
-              {/* <Text
-                fontSize="30px"
-                fontWeight="700"
-                className="describe_header"
-              >
-                Meet the Heroes of Extraterrestrial Societies
-              </Text> */}
-
               <Text fontSize="20px" fontWeight="500" margin="20px 0 0 0">
                 The Heroes of Extraterrestrial Societies is a collection of 6969
                 unique Elon Musk inspired NFTs - unique digital collectibles
@@ -46,36 +41,55 @@ const Overview = () => {
                 a price of 0.069 Eth each and each wallet is limited to 6 units.
               </Text>
             </Col>
-            <HeroGrid>
-              <Image
-                src={Logo1}
-                width="150px"
-                height="200px"
-                border={`1px solid white`}
-                borderRadius="10px"
-              />
-              <Image
-                src={Logo2}
-                width="150px"
-                height="200px"
-                border={`1px solid white`}
-                borderRadius="10px"
-              />
-              <Image
-                src={Logo3}
-                width="150px"
-                height="200px"
-                border={`1px solid white`}
-                borderRadius="10px"
-              />
-              <Image
-                src={Logo4}
-                width="150px"
-                height="200px"
-                border={`1px solid white`}
-                borderRadius="10px"
-              />
-            </HeroGrid>
+            {/* <Swiper
+              slidesPerView={3}
+              spaceBetween={30}
+              slidesPerGroup={3}
+              loop={true}
+              loopFillGroupWithBlank={true}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <Image
+                  src={Logo1}
+                  width="150px"
+                  height="200px"
+                  border={`1px solid ${theme.primaryLight}`}
+                  borderRadius="10px"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src={Logo1}
+                  width="150px"
+                  height="200px"
+                  border={`1px solid ${theme.primaryLight}`}
+                  borderRadius="10px"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src={Logo1}
+                  width="150px"
+                  height="200px"
+                  border={`1px solid ${theme.primaryLight}`}
+                  borderRadius="10px"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src={Logo1}
+                  width="150px"
+                  height="200px"
+                  border={`1px solid ${theme.primaryLight}`}
+                  borderRadius="10px"
+                />
+              </SwiperSlide>
+            </Swiper> */}
           </StyledOverview>
         </Col>
       </Col>

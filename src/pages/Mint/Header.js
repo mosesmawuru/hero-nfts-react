@@ -20,7 +20,6 @@ import {
   // client_address,
 } from "../../contract/address";
 import { contractABI } from "../../contract/ABI";
-
 // @import assets
 import backImg from "../../assets/background.jpg";
 
@@ -158,6 +157,7 @@ const Header = () => {
                 onChange={(e) => setStartTime(e.target.value)}
               />
             </Col>
+
             <Col align="center" margin="20px 0 0">
               <Button
                 variant="orchid"
@@ -177,28 +177,17 @@ const Header = () => {
 
         <Text
           fontSize="25px"
-          fontWeight="500"
-          fontFamily="Aladin"
+          fontWeight="bold"
           align="center"
           maxWidth="1100px"
           margin="10px 0 0 0"
         >
           Mint Price: 0.11 ETH
         </Text>
-        <Text
-          fontSize="25px"
-          fontWeight="500"
-          fontFamily="Aladin"
-          align="center"
-        >
+        <Text fontSize="25px" fontWeight="bold" align="center">
           Max Mint Per Wallet: 6
         </Text>
-        <Text
-          fontSize="25px"
-          fontWeight="500"
-          fontFamily="Aladin"
-          align="center"
-        >
+        <Text fontSize="25px" fontWeight="bold" align="center">
           Total Mint: 0/6969
         </Text>
         <Input
@@ -215,8 +204,7 @@ const Header = () => {
 
         <Text
           fontSize="25px"
-          fontWeight="500"
-          fontFamily="Aladin"
+          fontWeight="bold"
           align="center"
           maxWidth="1100px"
         >

@@ -24,5 +24,5 @@ export const Text = styled.span`
   top: ${(props) => props.top};
   left: ${(props) => props.left};
   transform: ${(props) => props.rotate || "rotate(0)"};
-  word-break: ${(props) => props.wordBreak};
+  word-break: ${(props) => (props.wordBreak ? props.wordBreak : "break-word")};
 `;
