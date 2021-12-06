@@ -12,15 +12,15 @@ const data = [
 
   {
     name: "Erik",
-    role: "Developer",
+    role: "Co-founder",
   },
   {
     name: "Aaron Wolf",
-    role: "Developer",
+    role: "Artist",
   },
   {
     name: "Tai Ming",
-    role: "Developer",
+    role: "CTO",
   },
 ];
 const Team = () => {

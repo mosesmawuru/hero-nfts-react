@@ -9,8 +9,8 @@ const MintPage = () => {
     <Col>
       <Header />
       <Overview />
-      <Team />
       <Roadmap />
+      <Team />
     </Col>
   );
 };
