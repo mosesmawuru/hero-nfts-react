@@ -9,16 +9,17 @@ const data = [
     name: "Adrian",
     role: "Co-founder",
   },
-  {
-    name: "Tai Ming",
-    role: "Developer",
-  },
+
   {
     name: "Erik",
     role: "Developer",
   },
   {
     name: "Aaron Wolf",
+    role: "Developer",
+  },
+  {
+    name: "Tai Ming",
     role: "Developer",
   },
 ];

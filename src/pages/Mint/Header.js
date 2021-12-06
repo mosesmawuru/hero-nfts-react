@@ -41,7 +41,7 @@ const Header = () => {
         .send({
           from: currentAcc,
           value: await web3.utils.toWei(
-            (count * 0.11).toFixed(3).toString(),
+            (count * 0.11).toFixed(2).toString(),
             "ether"
           ),
         })
@@ -208,7 +208,7 @@ const Header = () => {
           align="center"
           maxWidth="1100px"
         >
-          Total ETH: {(count * 0.11).toFixed(3)} ETH
+          Total ETH: {(count * 0.11).toFixed(2)} ETH
         </Text>
         <Button
           variant="lightBlue"

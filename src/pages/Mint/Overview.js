@@ -1,17 +1,31 @@
 import React from "react";
 // import { Swiper, SwiperSlide } from "swiper/react";
-
+// import { Swiper } from "swiper/react/swiper.js";
 import { Col } from "../../components/Layout";
 import { Text } from "../../components/Text";
-// import { Image } from "../../components/Image";
-
+import { Image } from "../../components/Image";
+// import Swiper from "swiper";
+import "swiper/swiper-bundle.css";
+import "swiper/swiper-bundle.js";
+import "swiper/modules/navigation/navigation.min.css"; // Navigation module
+import "swiper/modules/pagination/pagination.min.css"; // Pagination module
+import "swiper/modules/scrollbar/scrollbar.min.css"; // Pagination module
+import "swiper/modules/effect-fade/effect-fade.min.css";
+import "swiper/modules/lazy/lazy.min.css";
 import { theme } from "../../theme";
 import { OverviewSection, StyledOverview } from "../../style/Mint/style";
 
-// import Logo1 from "../../assets/NFT/1.jpg";
-// import Logo2 from "../../assets/NFT/2.jpg";
-// import Logo3 from "../../assets/NFT/3.jpg";
-// import Logo4 from "../../assets/NFT/4.jpg";
+import Logo1 from "../../assets/NFT/2.jpg";
+import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
+import SwiperCore, {
+  Keyboard,
+  Scrollbar,
+  Navigation,
+  Pagination,
+} from "swiper";
+
+SwiperCore.use([Keyboard, Scrollbar, Navigation, Pagination]);
+
 const Overview = () => {
   return (
     <OverviewSection>
@@ -30,7 +44,7 @@ const Overview = () => {
           </Text>
           <StyledOverview>
             <Col>
-              <Text fontSize="20px" fontWeight="500" margin="20px 0 0 0">
+              <Text fontSize="16.5px" fontWeight="500" margin="20px 0 0 0">
                 The Heroes of Extraterrestrial Societies is a collection of 6969
                 unique Elon Musk inspired NFTs - unique digital collectibles
                 living on the Ethereum Blockchain. Each hero is unique and
@@ -41,55 +55,105 @@ const Overview = () => {
                 a price of 0.069 Eth each and each wallet is limited to 6 units.
               </Text>
             </Col>
-            {/* <Swiper
-              slidesPerView={3}
-              spaceBetween={30}
-              slidesPerGroup={3}
-              loop={true}
-              loopFillGroupWithBlank={true}
-              pagination={{
-                clickable: true,
-              }}
-              navigation={true}
-              className="mySwiper"
-            >
-              <SwiperSlide>
-                <Image
-                  src={Logo1}
-                  width="150px"
-                  height="200px"
-                  border={`1px solid ${theme.primaryLight}`}
-                  borderRadius="10px"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image
-                  src={Logo1}
-                  width="150px"
-                  height="200px"
-                  border={`1px solid ${theme.primaryLight}`}
-                  borderRadius="10px"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image
-                  src={Logo1}
-                  width="150px"
-                  height="200px"
-                  border={`1px solid ${theme.primaryLight}`}
-                  borderRadius="10px"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image
-                  src={Logo1}
-                  width="150px"
-                  height="200px"
-                  border={`1px solid ${theme.primaryLight}`}
-                  borderRadius="10px"
-                />
-              </SwiperSlide>
-            </Swiper> */}
+            <Col margin="30px 0 0 0">
+              <Swiper
+                spaceBetween={1}
+                slidesPerGroup={3}
+                loop={true}
+                loopFillGroupWithBlank={true}
+                clickable={true}
+                autoplay={3000}
+                className="mySwiper"
+                breakpoints={{
+                  850: {
+                    slidesPerView: 3,
+                  },
+                  1100: {
+                    slidesPerView: 4,
+                  },
+                }}
+              >
+                {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((item, key) => {
+                  return (
+                    <SwiperSlide key={key + 1}>
+                      <Image
+                        src={Logo1}
+                        width="230px"
+                        height="275px"
+                        border={`1px solid ${theme.primaryLight}`}
+                        borderRadius="10px"
+                      />
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </Col>
+            <Col margin="30px 0 0 0">
+              <Swiper
+                spaceBetween={1}
+                slidesPerGroup={2}
+                loop={true}
+                loopFillGroupWithBlank={true}
+                clickable={true}
+                autoplay={3000}
+                className="subSwiper"
+                breakpoints={{
+                  0: {
+                    slidesPerView: 1,
+                  },
+                  590: {
+                    slidesPerView: 2,
+                  },
+                }}
+              >
+                {[0, 1, 2, 3].map((item, key) => {
+                  return (
+                    <SwiperSlide key={key + 1}>
+                      <Image
+                        src={Logo1}
+                        width="230px"
+                        height="275px"
+                        border={`1px solid ${theme.primaryLight}`}
+                        borderRadius="10px"
+                      />
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </Col>
+            <Col margin="30px 0 0 0">
+              <Swiper
+                spaceBetween={1}
+                slidesPerGroup={2}
+                loop={true}
+                loopFillGroupWithBlank={true}
+                clickable={true}
+                autoplay={3000}
+                className="subSwiper"
+                breakpoints={{
+                  0: {
+                    slidesPerView: 1,
+                  },
+                  590: {
+                    slidesPerView: 2,
+                  },
+                }}
+              >
+                {[0, 1, 2, 3].map((item, key) => {
+                  return (
+                    <SwiperSlide key={key + 1}>
+                      <Image
+                        src={Logo1}
+                        width="230px"
+                        height="275px"
+                        border={`1px solid ${theme.primaryLight}`}
+                        borderRadius="10px"
+                      />
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </Col>
           </StyledOverview>
         </Col>
       </Col>

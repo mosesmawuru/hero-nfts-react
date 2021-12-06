@@ -66,6 +66,7 @@ export const StyledHeader = styled.div`
 
 export const OverviewSection = styled.div`
   width: 100%;
+
   @media screen and (max-width: 850px) {
     .overview_header {
       font-size: 30px;
@@ -85,14 +86,30 @@ export const StyledOverview = styled.div`
   flex-direction: column;
   margin: 20px 0 0 0;
   padding: 0 40px;
+  width: calc(100% - 80px);
   align-items: center;
+  .mySwiper {
+    width: 100%;
+    text-align: center;
+  }
+  .subSwiper {
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
   @media screen and (max-width: 850px) {
     padding: 0 20px;
-
     align-items: center;
     .overview {
       align-items: center;
       text-align: center;
+    }
+    .mySwiper {
+      display: none;
+    }
+    .subSwiper {
+      display: block;
     }
   }
 `;
