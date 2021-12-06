@@ -18,13 +18,14 @@ import { OverviewSection, StyledOverview } from "../../style/Mint/style";
 import Logo1 from "../../assets/NFT/2.jpg";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
 import SwiperCore, {
+  Autoplay,
   Keyboard,
   Scrollbar,
   Navigation,
   Pagination,
 } from "swiper";
 
-SwiperCore.use([Keyboard, Scrollbar, Navigation, Pagination]);
+SwiperCore.use([Autoplay, Keyboard, Scrollbar, Navigation, Pagination]);
 
 const Overview = () => {
   return (
@@ -58,12 +59,15 @@ const Overview = () => {
             <Col margin="30px 0 0 0">
               <Swiper
                 spaceBetween={1}
-                slidesPerGroup={3}
+                slidesPerGroup={1}
                 loop={true}
                 loopFillGroupWithBlank={true}
                 clickable={true}
-                autoplay={3000}
                 className="mySwiper"
+                autoplay={{
+                  delay: 4000,
+                  disableOnInteraction: false,
+                }}
                 breakpoints={{
                   850: {
                     slidesPerView: 3,
@@ -91,12 +95,15 @@ const Overview = () => {
             <Col margin="30px 0 0 0">
               <Swiper
                 spaceBetween={1}
-                slidesPerGroup={2}
+                slidesPerGroup={1}
                 loop={true}
                 loopFillGroupWithBlank={true}
                 clickable={true}
-                autoplay={3000}
                 className="subSwiper"
+                autoplay={{
+                  delay: 4000,
+                  disableOnInteraction: false,
+                }}
                 breakpoints={{
                   0: {
                     slidesPerView: 1,
@@ -124,12 +131,15 @@ const Overview = () => {
             <Col margin="30px 0 0 0">
               <Swiper
                 spaceBetween={1}
-                slidesPerGroup={2}
+                slidesPerGroup={1}
                 loop={true}
                 loopFillGroupWithBlank={true}
                 clickable={true}
-                autoplay={3000}
                 className="subSwiper"
+                autoplay={{
+                  delay: 4000,
+                  disableOnInteraction: false,
+                }}
                 breakpoints={{
                   0: {
                     slidesPerView: 1,
