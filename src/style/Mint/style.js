@@ -38,7 +38,8 @@ export const StyledHeader = styled.div`
   }
   @media screen and (max-width: 500px) {
     .header-text {
-      font-size: 30px;
+      font-size: 18px;
+      line-height: 37px;
     }
   }
   .date-selector {
