@@ -15,7 +15,7 @@ const SocialLink = styled.a`
   padding: 8px;
   width: 33px;
   height: 33px;
-  background-color: ${theme.bgRoyalBlue};
+  background-color: ${theme.bgLightBlue};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <Col
       height="60px"
-      backgroundColor={theme.primaryDark}
+      backgroundColor={theme.primaryLight}
       align="center"
       justify="center"
       padding="5px 20px"
@@ -51,7 +51,7 @@ const Navbar = () => {
           </SocialLink>
         </Row>
         <Button
-          variant="royalBlue"
+          variant="lightBlue"
           onClick={() => {
             handleConnectWallet();
           }}
