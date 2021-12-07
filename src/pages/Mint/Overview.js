@@ -88,7 +88,7 @@ const Overview = () => {
                 including expressions, clothing, accessories, and more. Your
                 hero can serve as your digital profile, but is more importantly
                 a piece of a major corporation in the metaverse. Heroes mint at
-                a price of 0.069 Eth each and each wallet is limited to 6 units.
+                a price of 0.11 Eth each and each wallet is limited to 6 units.
               </Text>
             </Col>
             <Col margin="30px 0 0 0">

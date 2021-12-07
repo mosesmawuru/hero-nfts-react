@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { injectGlobal } from "styled-components";
-import horizonFont from "../../assets/fonts/Horizon.otf";
+import horizonFont from "../../assets/fonts/Horizon.ttf";
 injectGlobal`
   @font-face {
     font-family: 'horizon';
-    src: url(${horizonFont}) format('truetype');
+    src: url(${horizonFont});
     font-weight: normal;
     font-style: normal;
   }
@@ -17,24 +17,28 @@ export const StyledHeader = styled.div`
   width: 100%;
   align-items: center;
   position: relative;
+  br {
+  }
   .header-text {
     font-family: "horizon";
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1100px) {
     .header-text {
       font-size: 30px;
     }
   }
-  @media screen and (max-width: 670px) {
+  @media screen and (max-width: 750px) {
     .header_view {
       display: flex;
       flex-direction: column !important;
+    }
+    .header-text {
+      text-align: center;
     }
   }
   @media screen and (max-width: 500px) {
     .header-text {
       font-size: 30px;
-      line-height: 40px;
     }
   }
   .date-selector {

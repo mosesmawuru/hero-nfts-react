@@ -118,13 +118,15 @@ const Header = () => {
           fontWeight="bold"
           fontFamily="Horizon"
           margin="50px 0 0 0"
-          align="center"
           maxWidth="950px"
           padding="0 20px"
-          lineHeight="60px"
-          wordBreak="break-word"
+          lineHeight="80px"
+          align="left"
         >
-          HEROES OF EXTRATERRESTRIAL SOCIETIES
+          HEROES
+          <br /> OF
+          <br /> EXTRATERRESTRIAL
+          <br /> SOCIETIES
         </Text>
         <Image width="300px" src={spaceImg} />
         {/* <Col
