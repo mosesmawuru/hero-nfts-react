@@ -56,7 +56,7 @@ const Roadmap = () => {
         fontSize="55px"
         fontWeight="bold"
         fontFamily="Montserrat"
-        margin="30px 0 50px 0"
+        margin="0 0 50px 0"
       >
         ROADMAP
       </Text>

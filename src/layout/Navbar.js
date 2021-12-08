@@ -11,8 +11,8 @@ import styled from "styled-components";
 import { theme } from "../theme";
 const SocialLink = styled.a`
   @media screen and (max-width: 400px) {
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 50px;
   }
 `;
 const Navbar = () => {
@@ -26,7 +26,7 @@ const Navbar = () => {
       backgroundColor={theme.primaryLight}
       align="center"
       justify="center"
-      padding="5px 20px"
+      padding="5px 5px"
       width="calc(100% - 40px)"
     >
       <Row justify="space-between" width="100%" maxWidth="1300px">

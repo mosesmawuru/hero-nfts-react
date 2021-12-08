@@ -34,10 +34,8 @@ const Overview = () => {
     // First we'll have to set up our event listeners
     // We want to watch for clicks on our scroller
     var el = document.querySelector(".scroller");
-    console.log(el);
 
     if (el) {
-      console.log("Asdfasdfsadfafds");
       el.addEventListener("mousedown", function () {
         active = true;
         // Add our scrolling class so the scroller has full opacity while active
