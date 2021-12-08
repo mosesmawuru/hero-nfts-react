@@ -1,24 +1,15 @@
 import React from "react";
 // @import wallet connection
 import { useEthContext } from "../context/EthereumContext";
-// @import social icon
-import { FaTwitter, FaInstagram, FaDiscord } from "react-icons/fa";
 // @import component
 import { Row, Col } from "../components/Layout";
 import { Text } from "../components/Text";
 import { Button } from "../components/Button";
+import { Instgram, Twitter, Discord } from "../components/SocialIcon";
 // @import style
 import styled from "styled-components";
 import { theme } from "../theme";
 const SocialLink = styled.a`
-  border-radius: 100%;
-  padding: 8px;
-  width: 33px;
-  height: 33px;
-  background-color: ${theme.bgLightBlue};
-  display: flex;
-  align-items: center;
-  justify-content: center;
   @media screen and (max-width: 400px) {
     width: 20px;
     height: 20px;
@@ -40,14 +31,26 @@ const Navbar = () => {
     >
       <Row justify="space-between" width="100%" maxWidth="1300px">
         <Row mgap="0 10px 0 0">
-          <SocialLink href="https://twitter.com/HOESNFT">
-            <FaTwitter color={theme.primaryLight} size="25" />
+          <SocialLink
+            href="https://twitter.com/HOESNFT"
+            class="social-link social-link--twitter"
+            target="_blank"
+          >
+            <Twitter />
           </SocialLink>
-          <SocialLink href="https://www.instagram.com/hoesnft">
-            <FaInstagram color={theme.primaryLight} size="25" />
+          <SocialLink
+            href="https://www.instagram.com/hoesnft"
+            class="social-link social-link--instagram"
+            target="_blank"
+          >
+            <Instgram />
           </SocialLink>
-          <SocialLink href="https://discord.gg/4VbaqFHP">
-            <FaDiscord color={theme.primaryLight} size="25" />
+          <SocialLink
+            href="https://discord.gg/4VbaqFHP"
+            class="social-link social-link--discord"
+            target="_blank"
+          >
+            <Discord />
           </SocialLink>
         </Row>
         <Button

@@ -17,8 +17,7 @@ export const StyledHeader = styled.div`
   width: 100%;
   align-items: center;
   position: relative;
-  br {
-  }
+  min-height: calc(100vh - 60px);
   .header-text {
     font-family: "horizon";
   }
@@ -27,10 +26,13 @@ export const StyledHeader = styled.div`
       font-size: 30px;
     }
   }
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 810px) {
     .header_view {
       display: flex;
       flex-direction: column !important;
+      img {
+        width: 220px;
+      }
     }
     .header-text {
       text-align: center;

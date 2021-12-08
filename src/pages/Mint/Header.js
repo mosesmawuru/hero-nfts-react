@@ -1,7 +1,7 @@
 import React from "react";
 // @import Component
 // import { toast, ToastContainer } from "react-toastify";
-import { Row } from "../../components/Layout";
+import { Col, Row } from "../../components/Layout";
 // import { Button } from "../../components/Button";
 // import { Input } from "../../components/Input";
 import { Text } from "../../components/Text";
@@ -9,7 +9,7 @@ import { Image } from "../../components/Image";
 // import DatePicker from "react-datepicker";
 // @import assets
 import { StyledHeader } from "../../style/Mint/style";
-import { theme } from "../../theme";
+// import { theme } from "../../theme";
 import "react-datepicker/dist/react-datepicker.css";
 import "react-toastify/dist/ReactToastify.css";
 import "rc-time-picker/assets/index.css";
@@ -24,6 +24,7 @@ import "rc-time-picker/assets/index.css";
 // @import assets
 import backImg from "../../assets/black.png";
 import spaceImg from "../../assets/space.png";
+import { MintButton } from "../../components/MintButton";
 
 const Header = () => {
   // const [startDate, setStartDate] = useState(new Date());
@@ -226,16 +227,18 @@ const Header = () => {
         </Button>
       </Col> */}
       </Row>
-      <Row
-        backgroundColor={theme.bgLightBlue}
-        padding="10px 20px"
-        borderRadius="40px"
-        margin="0 0 50px 0"
-      >
-        <Text fontSize="30px" fontWeight="500" fontFamily="Bebas Neue">
-          Minting soon
-        </Text>
-      </Row>
+      <Col align="center">
+        <MintButton>
+          <Text
+            fontSize="40px"
+            fontWeight="500"
+            fontFamily="Bebas Neue"
+            align="center"
+          >
+            Minting soon
+          </Text>
+        </MintButton>
+      </Col>
       {/* <ToastContainer /> */}
     </StyledHeader>
   );

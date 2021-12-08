@@ -5,7 +5,7 @@ import { theme } from "../theme";
 
 const Footer = () => {
   return (
-    <Row height="350px" backgroundColor={theme.background} width="100%">
+    <Row height="80px" backgroundColor={theme.nftitem} width="100%">
       <Row
         align="center"
         justify="center"
