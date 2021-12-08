@@ -7,6 +7,7 @@ import { Col, Row } from "../../components/Layout";
 import { Text } from "../../components/Text";
 import { Image } from "../../components/Image";
 import { MintButton } from "../../components/MintButton";
+
 // import DatePicker from "react-datepicker";
 // @import assets
 import { StyledHeader } from "../../style/Mint/style";
@@ -24,10 +25,10 @@ import "react-toastify/dist/ReactToastify.css";
 // @import assets
 import backImg from "../../assets/images/black.png";
 import spaceImg from "../../assets/images/space2.png";
-import dotImg from "../../assets/images/effects/3dots.gif";
-import pink_circle from "../../assets/images/effects/pink_circle.gif";
-import stone from "../../assets/images/effects/stone.gif";
-import zebro_circle from "../../assets/images/effects/zebro_circle.gif";
+// import dotImg from "../../assets/images/effects/3dots.gif";
+// import pink_circle from "../../assets/images/effects/pink_circle.gif";
+// import stone from "../../assets/images/effects/stone.gif";
+// import zebro_circle from "../../assets/images/effects/zebro_circle.gif";
 
 const Header = () => {
   // const [startDate, setStartDate] = useState(new Date());
@@ -115,15 +116,11 @@ const Header = () => {
 
   return (
     <StyledHeader background={`url(${backImg})`}>
-      <Image src={stone} />
-      <Image src={dotImg} />
-      <Image src={pink_circle} />
-      <Image src={zebro_circle} />
       <Col align="center" margin="50px 0 0 0">
         <Row className="header_view" align="flex-start">
           <Text
             className="header-text"
-            fontSize="60px"
+            fontSize="59px"
             fontWeight="bold"
             fontFamily="Horizon"
             maxWidth="950px"
@@ -247,6 +244,7 @@ const Header = () => {
             </Text>
           </MintButton>
         </Col>
+
         {/* <ToastContainer /> */}
       </Col>
     </StyledHeader>

@@ -98,6 +98,7 @@ export const StyledHeader = styled.div`
 export const DigitalView = styled.div`
   width: 100%;
   display: flex;
+  margin-top: 50px;
   justify-content: center;
   @media screen and (max-width: 850px) {
     .digital_container {
@@ -114,17 +115,26 @@ export const DigitalView = styled.div`
 ////////////////////////////////////////////////////
 export const OverviewSection = styled.div`
   width: 100%;
-
+  display: flex;
+  justify-content: center;
   @media screen and (max-width: 850px) {
-    /* .overview_header {
+    .overview_header {
       font-size: 35px;
       text-align: center;
       padding: 0 10px;
-    } */
+    }
     .describe_header {
       width: 100%;
       font-size: 23px;
       text-align: center;
+    }
+    .overview_container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .overview_description {
+      padding: 0;
+      margin-bottom: 20px;
     }
   }
 `;
