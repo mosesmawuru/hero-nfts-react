@@ -135,6 +135,7 @@ export const OverviewSection = styled.div`
     .overview_description {
       padding: 0;
       margin-bottom: 20px;
+      font-size: 19px;
     }
   }
 `;
