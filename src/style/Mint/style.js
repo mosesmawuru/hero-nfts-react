@@ -93,26 +93,7 @@ export const StyledHeader = styled.div`
   & > *:not(:last-child) {
     margin-bottom: 30px;
   }
-`;
-////////////////////////////////////////////////////
-export const DigitalView = styled.div`
-  width: 100%;
-  display: flex;
-  margin-top: 50px;
-  justify-content: center;
-  @media screen and (max-width: 850px) {
-    .digital_container {
-      flex-direction: column-reverse;
-      align-items: center;
-    }
-  }
-  @media screen and (max-width: 500px) {
-    .digital_header {
-      font-size: 35px;
-    }
-  }
-`;
-////////////////////////////////////////////////////
+`; ////////////////////////////////////////////////////
 export const OverviewSection = styled.div`
   width: 100%;
   display: flex;
@@ -140,6 +121,33 @@ export const OverviewSection = styled.div`
   }
 `;
 
+////////////////////////////////////////////////////
+export const DigitalView = styled.div`
+  width: 100%;
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  @media screen and (max-width: 850px) {
+    .digital_container {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .digital_header {
+      font-size: 35px;
+    }
+  }
+`;
+////////////////////////////////////////////////////
+export const StyledRoadmap = styled.div`
+  width: 100%;
+  @media screen and (max-width: 850px) {
+    .roadmap_header {
+      font-size: 35px;
+    }
+  }
+`;
 ////////////////////////////////////////////////////
 export const StyledTeam = styled.div`
   width: 100%;

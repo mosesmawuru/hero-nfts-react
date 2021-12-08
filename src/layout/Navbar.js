@@ -27,7 +27,7 @@ const Navbar = () => {
       align="center"
       justify="center"
       padding="5px 5px"
-      width="calc(100% - 40px)"
+      width="calc(100% - 10px)"
     >
       <Row justify="space-between" width="100%" maxWidth="1300px">
         <Row mgap="0 5px 0 0">

@@ -1,29 +1,31 @@
 import React, { useEffect } from "react";
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { Swiper } from "swiper/react/swiper.js";
-import { Col, Row } from "../../components/Layout";
 import { Text } from "../../components/Text";
+import { Image } from "../../components/Image";
+import { Col, Row } from "../../components/Layout";
 import { MeetSlider } from "../../components/MeetSlider";
 // import Swiper from "swiper";
-import "swiper/swiper-bundle.css";
-import "swiper/swiper-bundle.js";
-import "swiper/modules/navigation/navigation.min.css"; // Navigation module
-import "swiper/modules/pagination/pagination.min.css"; // Pagination module
-import "swiper/modules/scrollbar/scrollbar.min.css"; // Pagination module
-import "swiper/modules/effect-fade/effect-fade.min.css";
-import "swiper/modules/lazy/lazy.min.css";
+// import "swiper/swiper-bundle.css";
+// import "swiper/swiper-bundle.js";
+// import "swiper/modules/navigation/navigation.min.css"; // Navigation module
+// import "swiper/modules/pagination/pagination.min.css"; // Pagination module
+// import "swiper/modules/scrollbar/scrollbar.min.css"; // Pagination module
+// import "swiper/modules/effect-fade/effect-fade.min.css";
+// import "swiper/modules/lazy/lazy.min.css";
 import { theme } from "../../theme";
 import { OverviewSection } from "../../style/Mint/style";
+import line from "../../assets/images/line.png";
 
-import SwiperCore, {
-  Autoplay,
-  Keyboard,
-  Scrollbar,
-  Navigation,
-  Pagination,
-} from "swiper";
+// import SwiperCore, {
+//   Autoplay,
+//   Keyboard,
+//   Scrollbar,
+//   Navigation,
+//   Pagination,
+// } from "swiper";
 
-SwiperCore.use([Autoplay, Keyboard, Scrollbar, Navigation, Pagination]);
+// SwiperCore.use([Autoplay, Keyboard, Scrollbar, Navigation, Pagination]);
 
 const Overview = () => {
   useEffect(() => {
@@ -99,48 +101,80 @@ const Overview = () => {
   });
   return (
     <OverviewSection>
-      <Row
-        backgroundColor={theme.nftitem}
-        align="flex-start"
-        margin="70px 0 0"
-        maxWidth="1200px"
-        padding="0 20px"
-        className="overview_container"
-      >
-        <Col align="center" maxWidth="1300px">
-          <Text
-            fontSize="55px"
-            fontWeight="bold"
-            fontFamily="Montserrat"
-            padding="0 40px"
-            className="overview_header"
-            wordBreak="break-word"
-          >
-            MEET THE HEROES
-          </Text>
-
-          <Col>
+      <Col align="center" margin="30px 0 0">
+        <Image src={line} width="95%" />
+        <Row
+          backgroundColor={theme.nftitem}
+          align="flex-start"
+          maxWidth="1200px"
+          padding="0 20px"
+          margin="30px 0 0"
+          className="overview_container"
+        >
+          <Col align="center" maxWidth="1300px">
             <Text
-              fontSize="20px"
-              fontWeight="500"
-              margin="20px 0 0 0"
-              align="center"
-              padding="0 15px"
-              className="overview_description"
+              fontSize="55px"
+              fontWeight="bold"
+              fontFamily="Montserrat"
+              padding="0 40px"
+              className="overview_header"
+              wordBreak="break-word"
             >
-              The Heroes of Extraterrestrial Societies is a collection of 6969
-              unique Elon Musk inspired NFTs - unique digital collectibles
-              living on the Ethereum Blockchain. Each hero is unique and
-              programmatically generated from over 100 possible traits,
-              including expressions, clothing, accessories, and more. Your hero
-              can serve as your digital profile, but is more importantly a piece
-              of a major corporation in the metaverse. Heroes mint at a price of
-              0.11 Eth each and each wallet is limited to 6 units.
+              MEET THE HEROES
             </Text>
+
+            <Col>
+              <Text
+                fontSize="20px"
+                fontWeight="500"
+                margin="20px 0 0 0"
+                align="center"
+                padding="0 15px"
+                className="overview_description"
+              >
+                The Heroes of Extraterrestrial Societies is a collection of 6969
+                unique Elon Musk inspired NFTs - unique digital collectibles
+                living on the Ethereum Blockchain.
+              </Text>
+              <Text
+                fontSize="20px"
+                fontWeight="500"
+                align="center"
+                padding="0 15px"
+                margin="10px 0 0 0"
+                className="overview_description"
+              >
+                Each hero is unique and programmatically generated from over 100
+                possible traits, including expressions, clothing, accessories,
+                and more.
+              </Text>
+              <Text
+                fontSize="20px"
+                fontWeight="500"
+                align="center"
+                padding="0 15px"
+                margin="10px 0 0 0"
+                className="overview_description"
+              >
+                Your hero can serve as your digital profile, but is more
+                importantly a piece of a major corporation in the metaverse.
+              </Text>
+              <Text
+                fontSize="20px"
+                fontWeight="500"
+                align="center"
+                padding="0 15px"
+                margin="10px 0 0 0"
+                className="overview_description"
+              >
+                Heroes mint at a price of 0.11 Eth each and each wallet is
+                limited to 6 units.
+              </Text>
+            </Col>
           </Col>
-        </Col>
-        <MeetSlider />
-      </Row>
+          <MeetSlider />
+        </Row>
+      </Col>
     </OverviewSection>
   );
 };
