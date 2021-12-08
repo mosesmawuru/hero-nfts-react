@@ -22,7 +22,13 @@ export const StyledHeader = styled.div`
   .header-text {
     font-family: "horizon";
   }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1300px) {
+    .header-text {
+      font-size: 50px;
+      line-height: 80px;
+    }
+  }
+  @media screen and (max-width: 1150px) {
     .header-text {
       font-size: 30px;
       line-height: 60px;
@@ -31,9 +37,10 @@ export const StyledHeader = styled.div`
   @media screen and (max-width: 810px) {
     .header_view {
       display: flex;
+      align-items: center;
       flex-direction: column !important;
       img {
-        width: 220px;
+        width: 180px;
       }
     }
     .header-text {

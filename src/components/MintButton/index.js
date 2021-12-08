@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../theme";
 const MintView = styled.div`
-  width: 180px;
+  width: 300px;
   height: 60px;
   position: relative;
   margin: 30px 0;
 `;
 const StyledButton = styled.div`
-  width: 180px;
-  height: 60px;
+  width: 300px;
+  height: 120px;
   position: absolute;
 `;
 const StyledView = styled.div`
@@ -17,8 +17,8 @@ const StyledView = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  width: 180px;
-  height: 60px;
+  width: 300px;
+  height: 100px;
   background-color: ${theme.bgLightBlue};
   outline: none;
   transition: 1s ease-in-out;
@@ -46,7 +46,7 @@ export const MintButton = ({ children }) => {
     <MintView>
       <StyledButton>
         <StyledView>
-          <svg width="180" height="60px" viewBox="0 0 180 60" class="border">
+          <svg width="300px" height="100px" viewBox="0 0 180 60" class="border">
             <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
             <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
           </svg>

@@ -112,17 +112,16 @@ const Header = () => {
 
   return (
     <StyledHeader background={`url(${backImg})`}>
-      <Col align="center">
-        <Row className="header_view">
+      <Col align="center" margin="50px 0 0 0">
+        <Row className="header_view" align="flex-start">
           <Text
             className="header-text"
-            fontSize="40px"
+            fontSize="60px"
             fontWeight="bold"
             fontFamily="Horizon"
-            margin="50px 0 0 0"
             maxWidth="950px"
             padding="0 20px"
-            lineHeight="80px"
+            lineHeight="100px"
             align="left"
           >
             HEROES
