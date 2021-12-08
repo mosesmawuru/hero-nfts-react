@@ -115,7 +115,7 @@ const Header = () => {
       <Row className="header_view">
         <Text
           className="header-text"
-          fontSize="55px"
+          fontSize="40px"
           fontWeight="bold"
           fontFamily="Horizon"
           margin="50px 0 0 0"

@@ -24,6 +24,7 @@ export const StyledHeader = styled.div`
   @media screen and (max-width: 1100px) {
     .header-text {
       font-size: 30px;
+      line-height: 60px;
     }
   }
   @media screen and (max-width: 810px) {

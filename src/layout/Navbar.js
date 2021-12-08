@@ -30,7 +30,7 @@ const Navbar = () => {
       width="calc(100% - 40px)"
     >
       <Row justify="space-between" width="100%" maxWidth="1300px">
-        <Row mgap="0 10px 0 0">
+        <Row mgap="0 5px 0 0">
           <SocialLink
             href="https://twitter.com/HOESNFT"
             class="social-link social-link--twitter"
