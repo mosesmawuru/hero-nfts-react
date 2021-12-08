@@ -112,25 +112,26 @@ const Header = () => {
 
   return (
     <StyledHeader background={`url(${backImg})`}>
-      <Row className="header_view">
-        <Text
-          className="header-text"
-          fontSize="40px"
-          fontWeight="bold"
-          fontFamily="Horizon"
-          margin="50px 0 0 0"
-          maxWidth="950px"
-          padding="0 20px"
-          lineHeight="80px"
-          align="left"
-        >
-          HEROES
-          <br /> OF
-          <br /> EXTRATERRESTRIAL
-          <br /> SOCIETIES
-        </Text>
-        <Image width="300px" src={spaceImg} />
-        {/* <Col
+      <Col align="center">
+        <Row className="header_view">
+          <Text
+            className="header-text"
+            fontSize="40px"
+            fontWeight="bold"
+            fontFamily="Horizon"
+            margin="50px 0 0 0"
+            maxWidth="950px"
+            padding="0 20px"
+            lineHeight="80px"
+            align="left"
+          >
+            HEROES
+            <br /> OF
+            <br /> EXTRATERRESTRIAL
+            <br /> SOCIETIES
+          </Text>
+          <Image width="300px" src={spaceImg} />
+          {/* <Col
         width="100%"
         align="center"
         margin="30px 0 0 0"
@@ -226,20 +227,21 @@ const Header = () => {
           </Text>
         </Button>
       </Col> */}
-      </Row>
-      <Col align="center">
-        <MintButton>
-          <Text
-            fontSize="40px"
-            fontWeight="500"
-            fontFamily="Bebas Neue"
-            align="center"
-          >
-            Minting soon
-          </Text>
-        </MintButton>
+        </Row>
+        <Col align="center">
+          <MintButton>
+            <Text
+              fontSize="40px"
+              fontWeight="500"
+              fontFamily="Bebas Neue"
+              align="center"
+            >
+              Minting soon
+            </Text>
+          </MintButton>
+        </Col>
+        {/* <ToastContainer /> */}
       </Col>
-      {/* <ToastContainer /> */}
     </StyledHeader>
   );
 };

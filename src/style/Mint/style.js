@@ -16,6 +16,7 @@ export const StyledHeader = styled.div`
   background-size: cover;
   width: 100%;
   align-items: center;
+  justify-content: center;
   position: relative;
   min-height: calc(100vh - 60px);
   .header-text {
