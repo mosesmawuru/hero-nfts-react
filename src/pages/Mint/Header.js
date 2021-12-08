@@ -6,13 +6,13 @@ import { Col, Row } from "../../components/Layout";
 // import { Input } from "../../components/Input";
 import { Text } from "../../components/Text";
 import { Image } from "../../components/Image";
+import { MintButton } from "../../components/MintButton";
 // import DatePicker from "react-datepicker";
 // @import assets
 import { StyledHeader } from "../../style/Mint/style";
 // import { theme } from "../../theme";
 import "react-datepicker/dist/react-datepicker.css";
 import "react-toastify/dist/ReactToastify.css";
-import "rc-time-picker/assets/index.css";
 // @import wallet connection
 // import { useEthContext } from "../../context/EthereumContext";
 // import {
@@ -22,9 +22,12 @@ import "rc-time-picker/assets/index.css";
 // } from "../../contract/address";
 // import { contractABI } from "../../contract/ABI";
 // @import assets
-import backImg from "../../assets/black.png";
-import spaceImg from "../../assets/space.png";
-import { MintButton } from "../../components/MintButton";
+import backImg from "../../assets/images/black.png";
+import spaceImg from "../../assets/images/space2.png";
+import dotImg from "../../assets/images/effects/3dots.gif";
+import pink_circle from "../../assets/images/effects/pink_circle.gif";
+import stone from "../../assets/images/effects/stone.gif";
+import zebro_circle from "../../assets/images/effects/zebro_circle.gif";
 
 const Header = () => {
   // const [startDate, setStartDate] = useState(new Date());
@@ -112,6 +115,10 @@ const Header = () => {
 
   return (
     <StyledHeader background={`url(${backImg})`}>
+      <Image src={stone} />
+      <Image src={dotImg} />
+      <Image src={pink_circle} />
+      <Image src={zebro_circle} />
       <Col align="center" margin="50px 0 0 0">
         <Row className="header_view" align="flex-start">
           <Text
@@ -129,6 +136,7 @@ const Header = () => {
             <br /> EXTRATERRESTRIAL
             <br /> SOCIETIES
           </Text>
+          {/* <Row className="space-img" /> */}
           <Image width="300px" src={spaceImg} />
           {/* <Col
         width="100%"

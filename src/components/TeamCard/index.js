@@ -2,7 +2,7 @@ import React from "react";
 import { Col } from "../Layout";
 import { Text } from "../Text";
 import { Image } from "../Image";
-import empty from "../../assets/avatar/empty.png";
+import empty from "../../assets/images/avatar/empty.png";
 import { theme } from "../../theme";
 
 export const TeamCard = ({ name, role }) => {

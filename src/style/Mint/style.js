@@ -9,6 +9,8 @@ injectGlobal`
     font-style: normal;
   }
   `;
+
+////////////////////////////////////////////////////
 export const StyledHeader = styled.div`
   display: flex;
   flex-direction: column;
@@ -21,6 +23,8 @@ export const StyledHeader = styled.div`
   min-height: calc(100vh - 60px);
   .header-text {
     font-family: "horizon";
+  }
+  .space-img {
   }
   @media screen and (max-width: 1300px) {
     .header-text {
@@ -90,16 +94,33 @@ export const StyledHeader = styled.div`
     margin-bottom: 30px;
   }
 `;
-
+////////////////////////////////////////////////////
+export const DigitalView = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 850px) {
+    .digital_container {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .digital_header {
+      font-size: 35px;
+    }
+  }
+`;
+////////////////////////////////////////////////////
 export const OverviewSection = styled.div`
   width: 100%;
 
   @media screen and (max-width: 850px) {
-    .overview_header {
-      font-size: 30px;
+    /* .overview_header {
+      font-size: 35px;
       text-align: center;
       padding: 0 10px;
-    }
+    } */
     .describe_header {
       width: 100%;
       font-size: 23px;
@@ -107,39 +128,8 @@ export const OverviewSection = styled.div`
     }
   }
 `;
-export const StyledOverview = styled.div`
-  transition: 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0 0 0;
-  padding: 0 40px;
-  width: calc(100% - 80px);
-  align-items: center;
-  .mySwiper {
-    width: 100%;
-    text-align: center;
-  }
-  .subSwiper {
-    width: 100%;
-    text-align: center;
-    display: none;
-  }
 
-  @media screen and (max-width: 850px) {
-    padding: 0 20px;
-    align-items: center;
-    .overview {
-      align-items: center;
-      text-align: center;
-    }
-    .mySwiper {
-      display: none;
-    }
-    .subSwiper {
-      display: block;
-    }
-  }
-`;
+////////////////////////////////////////////////////
 export const StyledTeam = styled.div`
   width: 100%;
   @media screen and (max-width: 750px) {

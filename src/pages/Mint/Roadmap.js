@@ -58,7 +58,7 @@ const Roadmap = () => {
         fontFamily="Montserrat"
         margin="30px 0 50px 0"
       >
-        Roadmap
+        ROADMAP
       </Text>
       <section className="sec-padd">
         <div className="container">
