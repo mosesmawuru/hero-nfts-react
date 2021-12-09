@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { theme } from "../../theme";
 const MintView = styled.div`
   width: 300px;
@@ -12,6 +12,20 @@ const StyledButton = styled.div`
   height: 120px;
   position: absolute;
 `;
+
+const SvgAnim = keyframes`
+  0% {
+    stroke-dashoffset: 150;
+  }
+  50%  {
+    stroke-dashoffset: -480;
+
+  } 
+  100% {
+    stroke-dashoffset: 150;
+  }
+`;
+
 const StyledView = styled.div`
   display: flex;
   align-items: center;
@@ -30,17 +44,17 @@ const StyledView = styled.div`
     stroke: #fff;
     stroke-dasharray: 150 480;
     stroke-dashoffset: 150;
-    transition: 1s ease-in-out;
+    /* transition: 1s ease-in-out; */
+    animation: ${SvgAnim} infinite;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
   }
 
-  :hover {
-    transition: 1s ease-in-out;
-    background: ${theme.bgLightBlueHover};
-  }
-  :hover svg {
+  /* :hover svg {
     stroke-dashoffset: -480;
-  }
+  } */
 `;
+
 export const MintButton = ({ children }) => {
   return (
     <MintView>

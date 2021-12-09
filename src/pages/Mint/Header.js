@@ -245,7 +245,6 @@ const Header = () => {
             </Text>
           </MintButton>
         </Col>
-
         {/* <ToastContainer /> */}
       </Col>
     </StyledHeader>
