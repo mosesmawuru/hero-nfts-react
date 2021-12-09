@@ -2,19 +2,19 @@ import React from "react";
 import { Col } from "../Layout";
 import { Text } from "../Text";
 import { Image } from "../Image";
-import empty from "../../assets/images/avatar/empty.png";
 import { theme } from "../../theme";
 
-export const TeamCard = ({ name, role }) => {
+export const TeamCard = ({ name, role, src }) => {
   return (
     <Col align="center">
       <Image
-        src={empty}
+        src={src}
         borderRadius="100%"
         width="100%"
         maxWidth="180px"
         maxHeight="180px"
         border={`4px solid ${theme.bgRoyalBlue}`}
+        objectFit="cover"
       ></Image>
       <Text
         color={theme.bgOrchid}

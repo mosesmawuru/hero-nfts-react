@@ -1,26 +1,36 @@
 import React from "react";
-import { Col, Grid } from "../../components/Layout";
 import { Text } from "../../components/Text";
+import { Col, Grid } from "../../components/Layout";
 import { TeamCard } from "../../components/TeamCard";
+
 import { theme } from "../../theme";
 import { StyledTeam } from "../../style/Mint/style";
+import Aaron from "../../assets/images/avatar/Aaron_wolf.jpg";
+import Adrian from "../../assets/images/avatar/Adrian.jpg";
+import Eric_wolf from "../../assets/images/avatar/Eric_wolf.jpg";
+import Taiming from "../../assets/images/avatar/Tai_cto.jpg";
+
 const data = [
   {
     name: "Adrian",
     role: "Co-founder",
+    src: Adrian,
   },
 
   {
     name: "Erik",
     role: "Co-founder",
+    src: Eric_wolf,
   },
   {
     name: "Aaron Wolf",
     role: "Artist",
+    src: Aaron,
   },
   {
     name: "Tai Ming",
     role: "CTO",
+    src: Taiming,
   },
 ];
 const Team = () => {
@@ -48,7 +58,12 @@ const Team = () => {
           >
             {data.map((item, key) => {
               return (
-                <TeamCard name={item.name} role={item.role} key={key + 1} />
+                <TeamCard
+                  name={item.name}
+                  role={item.role}
+                  src={item.src}
+                  key={key + 1}
+                />
               );
             })}
           </Grid>

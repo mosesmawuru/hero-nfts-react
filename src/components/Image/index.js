@@ -12,4 +12,5 @@ export const Image = styled.img`
   min-width: ${(props) => props.minWidth || "auto"};
   max-height: ${(props) => props.maxHeight || "auto"};
   min-height: ${(props) => props.minHeight || "auto"};
+  object-fit: ${(props) => props.objectFit};
 `;

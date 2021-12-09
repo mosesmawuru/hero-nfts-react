@@ -46,7 +46,7 @@ const Navbar = () => {
             <Instgram />
           </SocialLink>
           <SocialLink
-            href="https://discord.gg/4VbaqFHP"
+            href="https://discord.gg/gnrudFs44M"
             className="social-link social-link--discord"
             target="_blank"
           >

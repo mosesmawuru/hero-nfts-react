@@ -17,12 +17,12 @@ const Digital = () => {
             <Text
               fontSize="55px"
               fontWeight="bold"
-              fontFamily="Montserrat"
               margin="30px 0 0"
               className="digital_header"
               wordBreak="break-word"
               width="100%"
               align="center"
+              fontFamily="horizon"
             >
               DIGITAL GOODS
             </Text>

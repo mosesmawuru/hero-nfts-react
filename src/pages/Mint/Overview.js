@@ -114,11 +114,10 @@ const Overview = () => {
           <Col align="center" maxWidth="1300px">
             <Text
               fontSize="55px"
-              fontWeight="bold"
-              fontFamily="Montserrat"
               padding="0 40px"
               className="overview_header"
               wordBreak="break-word"
+              fontFamily="horizon"
             >
               MEET THE HEROES
             </Text>

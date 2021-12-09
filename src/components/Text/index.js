@@ -1,5 +1,15 @@
 import styled from "styled-components";
+import { injectGlobal } from "styled-components";
 import { theme } from "../../theme";
+import horizonFont from "../../assets/fonts/Horizon.ttf";
+injectGlobal`
+  @font-face {
+    font-family: 'horizon';
+    src: url(${horizonFont});
+    font-weight: normal;
+    font-style: normal;
+  }
+  `;
 export const Text = styled.span`
   transition: 0.3s ease-in-out;
   flex: ${(props) => props.flex || "auto"};

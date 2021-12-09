@@ -60,7 +60,7 @@ const Roadmap = () => {
         <Text
           fontSize="55px"
           fontWeight="bold"
-          fontFamily="Montserrat"
+          fontFamily="horizon"
           margin="40px 0 0 0"
           className="roadmap_header"
         >
@@ -111,9 +111,9 @@ const Roadmap = () => {
                     </div>
                     <div className="timeline-right">
                       <Text fontSize="20px" fontWeight="bold">
-                        Owning a Hero will grant exclusive minting access to a
-                        complimentary wives collection. With breeding children
-                        on the horizon.
+                        Owning a Hero will grant exclusive whitelist access to a
+                        follow up collection. With breeding between Heroes and
+                        the second collection on the horizon.
                       </Text>
                     </div>
                   </div>
@@ -142,7 +142,7 @@ const Roadmap = () => {
                         Don’t want to spoil too much but we plan to establish
                         various businesses in the metaverse, beginning in
                         Decentraland. All profits from these various business
-                        will 100% be redistributed to holders of
+                        will 100% be redistributed to holders of.
                       </Text>
                     </div>
                   </div>
