@@ -3,14 +3,13 @@ import { Col, Row } from "../../components/Layout";
 import { Text } from "../../components/Text";
 import { Image } from "../../components/Image";
 import { DigitalView } from "../../style/Mint/style";
-import line from "../../assets/images/line.png";
 import mobileImg from "../../assets/images/mobile.png";
 
 const Digital = () => {
   return (
     <DigitalView>
       <Col align="center">
-        <Image src={line} width="95%" />
+        <div className="dotborder"></div>
         <Row maxWidth="1200px" align="flex-start" className="digital_container">
           <Image src={mobileImg} maxWidth="400px" width="100%" />
           <Col>

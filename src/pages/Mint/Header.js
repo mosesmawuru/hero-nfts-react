@@ -135,6 +135,7 @@ const Header = () => {
           </Text>
           {/* <Row className="space-img" /> */}
           <Image width="300px" src={spaceImg} />
+
           {/* <Col
         width="100%"
         align="center"

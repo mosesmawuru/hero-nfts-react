@@ -36,6 +36,7 @@ const data = [
 const Team = () => {
   return (
     <StyledTeam>
+      <div className="dotborder"></div>
       <Col backgroundColor={theme.nftitem} align="center">
         <Col align="center" maxWidth="1300px" margin="0 0 40px 0">
           <Text

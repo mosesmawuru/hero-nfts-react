@@ -4,8 +4,6 @@ import { Text } from "../../components/Text";
 import { Col } from "../../components/Layout";
 import { theme } from "../../theme";
 import "../../style/Mint/roadmap.css";
-import line from "../../assets/images/line.png";
-import { Image } from "../../components/Image";
 import { StyledRoadmap } from "../../style/Mint/style";
 const Roadmap = () => {
   useEffect(() => {
@@ -56,7 +54,7 @@ const Roadmap = () => {
   return (
     <StyledRoadmap>
       <Col className="xxx" backgroundColor={theme.nftitem} align="center">
-        <Image src={line} width="95%" />
+        <div className="dotborder"></div>
         <Text
           fontSize="55px"
           fontWeight="bold"

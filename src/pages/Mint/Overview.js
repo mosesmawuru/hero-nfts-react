@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { Swiper } from "swiper/react/swiper.js";
 import { Text } from "../../components/Text";
-import { Image } from "../../components/Image";
 import { Col, Row } from "../../components/Layout";
 import { MeetSlider } from "../../components/MeetSlider";
 // import Swiper from "swiper";
@@ -15,7 +14,7 @@ import { MeetSlider } from "../../components/MeetSlider";
 // import "swiper/modules/lazy/lazy.min.css";
 import { theme } from "../../theme";
 import { OverviewSection } from "../../style/Mint/style";
-import line from "../../assets/images/line.png";
+// import line from "../../assets/images/line.png";
 
 // import SwiperCore, {
 //   Autoplay,
@@ -102,7 +101,9 @@ const Overview = () => {
   return (
     <OverviewSection>
       <Col align="center" margin="30px 0 0">
-        <Image src={line} width="95%" />
+        {/* <Image src={line} width="95%" /> */}
+        <div className="dotborder"></div>
+
         <Row
           backgroundColor={theme.nftitem}
           align="flex-start"
@@ -110,6 +111,7 @@ const Overview = () => {
           padding="0 20px"
           margin="30px 0 0"
           className="overview_container"
+          borderStyle="dotted"
         >
           <Col align="center" maxWidth="1300px">
             <Text

@@ -98,6 +98,11 @@ export const OverviewSection = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  .dotborder {
+    border-top: 4px dotted !important;
+    width: 90%;
+    border-color: white !important;
+  }
   @media screen and (max-width: 850px) {
     .overview_header {
       font-size: 35px;
@@ -127,6 +132,11 @@ export const DigitalView = styled.div`
   display: flex;
   margin-top: 50px;
   justify-content: center;
+  .dotborder {
+    border-top: 4px dotted !important;
+    width: 90%;
+    border-color: white !important;
+  }
   @media screen and (max-width: 850px) {
     .digital_container {
       flex-direction: column-reverse;
@@ -142,6 +152,11 @@ export const DigitalView = styled.div`
 ////////////////////////////////////////////////////
 export const StyledRoadmap = styled.div`
   width: 100%;
+  .dotborder {
+    border-top: 4px dotted !important;
+    width: 90%;
+    border-color: white !important;
+  }
   @media screen and (max-width: 850px) {
     .roadmap_header {
       font-size: 35px;
