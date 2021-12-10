@@ -16,15 +16,16 @@ contract MintContract is ERC721, Ownable {
     constructor() ERC721("HERO", "HER") {}
 
     modifier duringMintTime() {
-        require( block.timestamp >= startTime && block.timestamp <= startTime + duration,"It's not mint time");
+        require( block.timestamp >= startTime && block.timestamp <= startTime + duration, "It's not mint time");
         _;
     }
 
-    function mintNFT ( uint _count ) external payable duringMintTime{
-        // require(total_supply + _count <= 6969, "Can't mint anymore");
-        // require(msg.value == .11 ether * _count,"Not match balance");
-        // require(ownwallet[msg.sender] + _count <= 6,"Maxium is 6");
-
+    function mintNFT ( uint _count ) external payable {
+        require(address(this).balance>0,"Not enough ETH");
+        require(total_supply + _count <= 10000, "Can't mint anymore");
+        require(msg.value == .1 ether * _count,"Not match balance");
+        require(ownwallet[msg.sender] + _count <= 6,"Maxium is 6");
+        
         for( uint i = 0; i < _count; i++ ) {
             _mint(msg.sender, total_supply);
             total_supply++;

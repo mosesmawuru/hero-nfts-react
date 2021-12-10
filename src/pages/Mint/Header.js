@@ -48,7 +48,7 @@ const Header = () => {
   //       .send({
   //         from: currentAcc,
   //         value: await web3.utils.toWei(
-  //           (count * 0.11).toFixed(2).toString(),
+  //           (count * 0.1).toFixed(1).toString(),
   //           "ether"
   //         ),
   //       })
@@ -192,13 +192,13 @@ const Header = () => {
           maxWidth="1100px"
           margin="10px 0 0 0"
         >
-          Mint Price: 0.11 ETH
+          Mint Price: 0.1 ETH
         </Text>
         <Text fontSize="25px" fontWeight="bold" align="center">
           Max Mint Per Wallet: 6
         </Text>
         <Text fontSize="25px" fontWeight="bold" align="center">
-          Total Mint: 0/6969
+          Total Mint: 0/1000
         </Text>
         <Input
           type="number"
@@ -218,7 +218,7 @@ const Header = () => {
           align="center"
           maxWidth="1100px"
         >
-          Total ETH: {(count * 0.11).toFixed(2)} ETH
+          Total ETH: {(count * 0.1).toFixed(1)} ETH
         </Text>
         <Button
           variant="lightBlue"

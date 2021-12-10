@@ -133,7 +133,7 @@ const Overview = () => {
                 padding="0 15px"
                 className="overview_description"
               >
-                The Heroes of Extraterrestrial Societies is a collection of 6969
+                The Heroes of Extraterrestrial Societies is a collection of 1000
                 unique Elon Musk inspired NFTs - unique digital collectibles
                 living on the Ethereum Blockchain.
               </Text>
@@ -168,7 +168,7 @@ const Overview = () => {
                 margin="10px 0 0 0"
                 className="overview_description"
               >
-                Heroes mint at a price of 0.11 Eth each and each wallet is
+                Heroes mint at a price of 0.1 Eth each and each wallet is
                 limited to 6 units.
               </Text>
             </Col>

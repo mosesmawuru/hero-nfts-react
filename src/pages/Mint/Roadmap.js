@@ -80,7 +80,7 @@ const Roadmap = () => {
                     </div>
                     <div className="timeline-right">
                       <Text fontSize="20px" fontWeight="bold">
-                        Once all 6969 unique NFTs have been minted, we will be
+                        Once all 10000 unique NFTs have been minted, we will be
                         giving away the value of a tesla Model 3 in Eth to 5
                         random wallets. Each purchase is a single entry, but
                         each wallet can only win once.
