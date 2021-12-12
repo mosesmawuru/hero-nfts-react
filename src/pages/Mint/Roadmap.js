@@ -76,14 +76,13 @@ const Roadmap = () => {
                 <li className="in-view">
                   <div className="timeline-in">
                     <div className="timeline-left">
-                      <h4>Giving Back</h4>
+                      <h4>The Drop</h4>
                     </div>
                     <div className="timeline-right">
                       <Text fontSize="20px" fontWeight="bold">
-                        Once all 10000 unique NFTs have been minted, we will be
-                        giving away the value of a tesla Model 3 in Eth to 5
-                        random wallets. Each purchase is a single entry, but
-                        each wallet can only win once.
+                        Following a successful launch, five Tesla Model 3’s are
+                        headed straight to five of our holders to say thank
+                        you*!
                       </Text>
                     </div>
                   </div>
@@ -92,26 +91,24 @@ const Roadmap = () => {
                   <div className="timeline-in">
                     <div className="timeline-left">
                       <Text fontSize="20px" fontWeight="bold">
-                        We want this project to be about community. Joining the
-                        society will grant access to exclusive content, events,
-                        and meetups each year.
+                        Exclusive Content, events, and meetups are created for
+                        our members.
                       </Text>
                     </div>
                     <div className="timeline-right">
-                      <h4>Community exclusives</h4>
+                      <h4>The Community</h4>
                     </div>
                   </div>
                 </li>
                 <li className="in-view">
                   <div className="timeline-in">
                     <div className="timeline-left">
-                      <h4>Rewards </h4>
+                      <h4>The Rewards</h4>
                     </div>
                     <div className="timeline-right">
                       <Text fontSize="20px" fontWeight="bold">
-                        Owning a Hero will grant exclusive whitelist access to a
-                        follow up collection. With breeding between Heroes and
-                        the second collection on the horizon.
+                        Owning your HERO NFT will grant exclusive whitelist
+                        access to a follow up collection on the horizon...
                       </Text>
                     </div>
                   </div>
@@ -120,27 +117,26 @@ const Roadmap = () => {
                   <div className="timeline-in">
                     <div className="timeline-left">
                       <Text fontSize="20px" fontWeight="bold">
-                        Owning HOES grants voting rights in the direction of the
-                        project. We want to empower our community and allow them
-                        to take action.
+                        Owning a HERO punches your ticket to directing the
+                        company. We want to empower our community and allow
+                        their voice to be heard.
                       </Text>
                     </div>
                     <div className="timeline-right">
-                      <h4>Power</h4>
+                      <h4>The Influence</h4>
                     </div>
                   </div>
                 </li>
                 <li className="">
                   <div className="timeline-in">
                     <div className="timeline-left">
-                      <h4>Metaverse corporation </h4>
+                      <h4>The Metaverse</h4>
                     </div>
                     <div className="timeline-right">
                       <Text fontSize="20px" fontWeight="bold">
-                        Don’t want to spoil too much but we plan to establish
-                        various businesses in the metaverse, beginning in
-                        Decentraland. All profits from these various business
-                        will 100% be redistributed to holders of.
+                        We voyage into the Metaverse, where we plan to establish
+                        various businesses where 100% of the profits will be
+                        allocated to owners of a HERO NFT.
                       </Text>
                     </div>
                   </div>
@@ -149,6 +145,10 @@ const Roadmap = () => {
             </div>
           </div>
         </section>
+        <Text fontSize="28px" padding="0 15px" align="center" fontWeight="bold">
+          The value of a Tesla Model 3 will be sent to your wallet if you are a
+          winner
+        </Text>
       </Col>
     </StyledRoadmap>
   );

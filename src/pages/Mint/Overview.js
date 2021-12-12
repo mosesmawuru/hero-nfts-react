@@ -133,9 +133,9 @@ const Overview = () => {
                 padding="0 15px"
                 className="overview_description"
               >
-                The Heroes of Extraterrestrial Societies is a collection of 1000
-                unique Elon Musk inspired NFTs - unique digital collectibles
-                living on the Ethereum Blockchain.
+                The Heroes of Extraterrestrial Societies is a collection of
+                10000 unique Elon Musk inspired NFTs - unique digital
+                collectibles living on the Ethereum Blockchain.
               </Text>
               <Text
                 fontSize="20px"

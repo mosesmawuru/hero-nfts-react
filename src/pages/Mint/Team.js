@@ -42,11 +42,9 @@ const Team = () => {
           <Text
             fontSize="55px"
             fontWeight="bold"
-            fontFamily="Montserrat"
-            margin="30px 0 0"
-            padding="0 40px"
-            className="overview_header"
-            wordBreak="break-word"
+            fontFamily="horizon"
+            margin="40px 0 0 0"
+            className="team_header"
           >
             Team
           </Text>

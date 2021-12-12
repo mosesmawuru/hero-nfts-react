@@ -166,6 +166,21 @@ export const StyledRoadmap = styled.div`
 ////////////////////////////////////////////////////
 export const StyledTeam = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+
+  align-items: center;
+  .dotborder {
+    border-top: 4px dotted !important;
+    width: 90%;
+    border-color: white !important;
+  }
+  @media screen and (max-width: 850px) {
+    .team_header {
+      font-size: 35px;
+    }
+  }
   @media screen and (max-width: 750px) {
     .team_grid {
       grid-template: repeat(2, 1fr) / repeat(2, 1fr) !important;
