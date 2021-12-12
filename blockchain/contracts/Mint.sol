@@ -20,7 +20,7 @@ contract MintContract is ERC721, Ownable {
         _;
     }
 
-    function mintNFT ( uint _count ) external payable {
+    function mintNFT ( uint _count ) external payable duringMintTime{
         require(address(this).balance>0,"Not enough ETH");
         require(total_supply + _count <= 10000, "Can't mint anymore");
         require(msg.value == .1 ether * _count,"Not match balance");
