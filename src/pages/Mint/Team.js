@@ -6,7 +6,7 @@ import { TeamCard } from "../../components/TeamCard";
 import { theme } from "../../theme";
 import { StyledTeam } from "../../style/Mint/style";
 import Aaron from "../../assets/images/avatar/Aaron_wolf.jpg";
-import Adrian from "../../assets/images/avatar/Adrian.jpg";
+import Adrian from "../../assets/images/avatar/Adrian.png";
 import Eric_wolf from "../../assets/images/avatar/Eric_wolf.jpg";
 import Taiming from "../../assets/images/avatar/Tai_cto.jpg";
 
