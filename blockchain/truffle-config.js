@@ -53,7 +53,7 @@ module.exports = {
       provider: function () {
         return new HDWalletProvider(
           mnemonic,
-          "https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
+          "https://speedy-nodes-nyc.moralis.io/0d1e05ef898435177c9c7f33/eth/ropsten"
         );
       },
       network_id: 3,
