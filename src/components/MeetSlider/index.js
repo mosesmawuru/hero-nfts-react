@@ -13,7 +13,6 @@ export const MeetSlider = () => {
               src={Elon2}
               draggable="false"
               alt="mask1"
-              style={{ objectFit: "cover" }}
             />
           </div>
           <div className="after">
@@ -22,7 +21,6 @@ export const MeetSlider = () => {
               src={Elon1}
               draggable="false"
               alt="mask2"
-              style={{ objectFit: "cover" }}
             />
           </div>
           <div className="scroller">
