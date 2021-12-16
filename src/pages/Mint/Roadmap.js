@@ -145,8 +145,8 @@ const Roadmap = () => {
             </div>
           </div>
         </section>
-        <Text fontSize="28px" padding="0 15px" align="center" fontWeight="bold">
-          The value of a Tesla Model 3 will be sent to your wallet if you are a
+        <Text fontSize="12px" padding="0 15px" align="center" fontWeight="bold">
+          *The value of a Tesla Model 3 will be sent to your wallet if you are a
           winner
         </Text>
       </Col>
