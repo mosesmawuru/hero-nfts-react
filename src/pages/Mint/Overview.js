@@ -132,6 +132,7 @@ const Overview = () => {
                 align="center"
                 padding="0 15px"
                 className="overview_description"
+                width="100%"
               >
                 The Heroes of Extraterrestrial Societies is a collection of
                 10000 unique Elon Musk inspired NFTs - unique digital
@@ -144,8 +145,9 @@ const Overview = () => {
                 padding="0 15px"
                 margin="10px 0 0 0"
                 className="overview_description"
+                width="100%"
               >
-                Each hero is unique and programmatically generated from over 100
+                Each hero is unique and programmatically generated from over 250
                 possible traits, including expressions, clothing, accessories,
                 and more.
               </Text>
@@ -156,6 +158,7 @@ const Overview = () => {
                 padding="0 15px"
                 margin="10px 0 0 0"
                 className="overview_description"
+                width="100%"
               >
                 Your hero can serve as your digital profile, but is more
                 importantly a piece of a major corporation in the metaverse.
@@ -167,6 +170,7 @@ const Overview = () => {
                 padding="0 15px"
                 margin="10px 0 0 0"
                 className="overview_description"
+                width="100%"
               >
                 Heroes mint at a price of 0.1 Eth each and each wallet is
                 limited to 6 units.

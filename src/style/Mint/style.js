@@ -130,7 +130,8 @@ export const OverviewSection = styled.div`
 export const DigitalView = styled.div`
   width: 100%;
   display: flex;
-  margin-top: 50px;
+  margin: 50px 0 50px 0;
+
   justify-content: center;
   .dotborder {
     border-top: 4px dotted !important;

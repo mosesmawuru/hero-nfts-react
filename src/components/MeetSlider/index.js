@@ -1,6 +1,6 @@
 import React from "react";
-import Elon1 from "../../assets/images/NFT/7.jpg";
-import Elon2 from "../../assets/images/NFT/5.jpg";
+import Elon1 from "../../assets/images/NFT/9.png";
+import Elon2 from "../../assets/images/NFT/10.jpg";
 import "./style.css";
 export const MeetSlider = () => {
   return (
@@ -10,17 +10,19 @@ export const MeetSlider = () => {
           <div className="before">
             <img
               className="content-image"
-              src={Elon1}
+              src={Elon2}
               draggable="false"
               alt="mask1"
+              style={{ objectFit: "cover" }}
             />
           </div>
           <div className="after">
             <img
               className="content-image"
-              src={Elon2}
+              src={Elon1}
               draggable="false"
               alt="mask2"
+              style={{ objectFit: "cover" }}
             />
           </div>
           <div className="scroller">

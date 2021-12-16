@@ -32,9 +32,9 @@ const Digital = () => {
               padding="0 12px"
             >
               Our team foresees continued growth in the NFT, augmented reality,
-              and blockchain sectors over the next decade. The end goal of this
+              and blockchain sectors of the next decade. The end goal of this
               project is to capitalize on the youth of these industries and
-              reward our investors
+              reward our early investors.
             </Text>
             <Text
               align="center"
@@ -42,9 +42,14 @@ const Digital = () => {
               fontSize="20px"
               padding="0 12px"
             >
-              Rather than raising capital through a token, we want each NFT from
-              this collection to represent a 0.014% stake in the company.
-              Profits will be distributed accordingly
+              Rather than raising capital via a tradition route, we want each
+              NFT from this collection to represent a 0.007% stake in a company
+              to be announced upon the minting of the collection. The company
+              will focus on the production of digital goods and building
+              infrastructure needed in various virtual destinations
+              (Decentraland, Somnium, Upland) for users to achieve real world
+              experiences. Profits from these endeavors will be distributed to
+              shareholders accordingly.
             </Text>
           </Col>
         </Row>
