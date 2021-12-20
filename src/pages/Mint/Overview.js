@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 // import { Swiper } from "swiper/react/swiper.js";
 import { Text } from "../../components/Text";
 import { Col, Row } from "../../components/Layout";
+import { Image } from "../../components/Image";
 import { MeetSlider } from "../../components/MeetSlider";
 // import Swiper from "swiper";
 // import "swiper/swiper-bundle.css";
@@ -14,6 +15,8 @@ import { MeetSlider } from "../../components/MeetSlider";
 // import "swiper/modules/lazy/lazy.min.css";
 import { theme } from "../../theme";
 import { OverviewSection } from "../../style/Mint/style";
+
+import Elon2 from "../../assets/images/NFT/10.jpg";
 // import line from "../../assets/images/line.png";
 
 // import SwiperCore, {
@@ -27,77 +30,6 @@ import { OverviewSection } from "../../style/Mint/style";
 // SwiperCore.use([Autoplay, Keyboard, Scrollbar, Navigation, Pagination]);
 
 const Overview = () => {
-  useEffect(() => {
-    // I hope this over-commenting helps. Let's do this!
-    // Let's use the 'active' variable to let us know when we're using it
-    let active = false;
-
-    // First we'll have to set up our event listeners
-    // We want to watch for clicks on our scroller
-    var el = document.querySelector(".scroller");
-
-    if (el) {
-      el.addEventListener("mousedown", function () {
-        active = true;
-        // Add our scrolling class so the scroller has full opacity while active
-        el.classList.add("scrolling");
-      });
-    }
-
-    // We also want to watch the body for changes to the state,
-    // like moving around and releasing the click
-    // so let's set up our event listeners
-    document.body.addEventListener("mouseup", function () {
-      active = false;
-      document.querySelector(".scroller").classList.remove("scrolling");
-    });
-    document.body.addEventListener("mouseleave", function () {
-      active = false;
-      document.querySelector(".scroller").classList.remove("scrolling");
-    });
-
-    // Let's figure out where their mouse is at
-    document.body.addEventListener("mousemove", function (e) {
-      if (!active) return;
-      // Their mouse is here...
-      let x = e.pageX;
-      // but we want it relative to our wrapper
-      x -= document.querySelector(".wrapper").getBoundingClientRect().left;
-      // Okay let's change our state
-      scrollIt(x);
-    });
-
-    // Let's use this function
-    function scrollIt(x) {
-      let transform = Math.max(
-        0,
-        Math.min(x, document.querySelector(".wrapper").offsetWidth)
-      );
-      document.querySelector(".after").style.width = transform + "px";
-      document.querySelector(".scroller").style.left = transform - 25 + "px";
-    }
-
-    // Let's set our opening state based off the width,
-    // we want to show a bit of both images so the user can see what's going on
-    scrollIt(150);
-
-    // And finally let's repeat the process for touch events
-    // first our middle scroller...
-    document
-      .querySelector(".scroller")
-      .addEventListener("touchstart", function () {
-        active = true;
-        document.querySelector(".scroller").classList.add("scrolling");
-      });
-    document.body.addEventListener("touchend", function () {
-      active = false;
-      document.querySelector(".scroller").classList.remove("scrolling");
-    });
-    document.body.addEventListener("touchcancel", function () {
-      active = false;
-      document.querySelector(".scroller").classList.remove("scrolling");
-    });
-  });
   return (
     <OverviewSection>
       <Col align="center" margin="30px 0 0">
@@ -120,6 +52,7 @@ const Overview = () => {
               className="overview_header"
               wordBreak="break-word"
               fontFamily="horizon"
+              align="center"
             >
               MEET THE HEROES
             </Text>
@@ -177,7 +110,14 @@ const Overview = () => {
               </Text>
             </Col>
           </Col>
-          <MeetSlider />
+          <Image
+            border="8px solid #dfe0e0"
+            borderRadius="20px"
+            src={Elon2}
+            maxWidth="260px"
+            height="300px"
+            width="100%"
+          />
         </Row>
       </Col>
     </OverviewSection>

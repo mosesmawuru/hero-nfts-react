@@ -7,13 +7,13 @@ import sherwin_rasekh from "../assets/images/avatar/sherwin_rasekh.jpg";
 
 export const teamdata = [
   {
-    name: "Adrian",
+    name: "Adrian Barbir",
     role: "Co-founder",
     src: Adrian,
   },
 
   {
-    name: "Erik",
+    name: "Erik McCue",
     role: "Co-founder",
     src: Eric_wolf,
   },
@@ -28,12 +28,12 @@ export const teamdata = [
     src: Taiming,
   },
   {
-    name: "Gabriella_Whited",
+    name: "Gabriella Whited",
     role: "CMO",
     src: gabriella_whited,
   },
   {
-    name: "Sherwin_Rasekh",
+    name: "Sherwin Rasekh",
     role: "CFO",
     src: sherwin_rasekh,
   },

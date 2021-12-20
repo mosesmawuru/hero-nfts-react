@@ -144,7 +144,7 @@ export const DigitalView = styled.div`
       align-items: center;
     }
   }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 600px) {
     .digital_header {
       font-size: 35px;
     }
