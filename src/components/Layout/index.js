@@ -85,7 +85,7 @@ export const Row = styled.div`
   backdrop-filter: ${(props) => props.backdropFilter || "none"};
 
   & > *:not(:last-child) {
-    margin: ${(props) => props.mgap};
+    margin-right: ${(props) => props.mgap};
   }
 `;
 export const Grid = styled.div`

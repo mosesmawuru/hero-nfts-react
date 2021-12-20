@@ -6,16 +6,15 @@ import { theme } from "../../theme";
 
 export const TeamCard = ({ name, role, src }) => {
   return (
-    <Col align="center">
+    <Col align="center" width="180px" margin="15px 30px">
       <Image
         src={src}
         borderRadius="100%"
-        width="100%"
-        maxWidth="180px"
-        maxHeight="180px"
+        width="180px"
+        height="180px"
         border={`4px solid ${theme.bgRoyalBlue}`}
         objectFit="cover"
-      ></Image>
+      />
       <Text
         color={theme.bgOrchid}
         fontSize="22px"
