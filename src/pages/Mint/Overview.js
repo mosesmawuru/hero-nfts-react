@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { Swiper } from "swiper/react/swiper.js";
 import { Text } from "../../components/Text";
 import { Col, Row } from "../../components/Layout";
 import { Image } from "../../components/Image";
-import { MeetSlider } from "../../components/MeetSlider";
+// import { MeetSlider } from "../../components/MeetSlider";
 // import Swiper from "swiper";
 // import "swiper/swiper-bundle.css";
 // import "swiper/swiper-bundle.js";
