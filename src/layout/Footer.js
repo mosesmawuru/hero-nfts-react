@@ -14,7 +14,7 @@ const Footer = () => {
         maxWidth="1300px !important"
       >
         <Col width="auto" align="center">
-          <Text align="center">Heroes of extraterrestrial societies</Text>
+          <Text align="center">Heroes of Extraterrestrial Societies LLC</Text>
           <Text margin="5px 0 0 0">
             Copyright &copy; {new Date().getFullYear()}
           </Text>
