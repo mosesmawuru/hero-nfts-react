@@ -29,6 +29,8 @@ const Team = () => {
                   role={item.role}
                   src={item.src}
                   key={key + 1}
+                  instgram={item.instgram}
+                  linkedin={item.linkedin}
                 />
               );
             })}

@@ -8,7 +8,7 @@ import { Instgram, Linkedin } from "../SocialAvatar";
 const SocialLink = styled.a`
   cursor: pointer;
 `;
-export const TeamCard = ({ name, role, src }) => {
+export const TeamCard = ({ name, role, src, instgram, linkedin }) => {
   return (
     <Col align="center" width="180px" margin="15px 30px">
       <Image
@@ -33,12 +33,14 @@ export const TeamCard = ({ name, role, src }) => {
 
       <Row mgap="0 5px 0 0" margin="3px 0 0 0">
         <SocialLink
+          href={instgram}
           className="social-link social-link--twitter"
           target="_blank"
         >
           <Instgram />
         </SocialLink>
         <SocialLink
+          href={linkedin}
           className="social-link social-link--twitter"
           target="_blank"
         >
