@@ -32,21 +32,21 @@ const Navbar = () => {
       <Row justify="space-between" width="100%" maxWidth="1300px">
         <Row mgap="0 5px 0 0">
           <SocialLink
-            href="https://twitter.com/HOESNFT"
+            href="https://twitter.com/realheroesnft"
             className="social-link social-link--twitter"
             target="_blank"
           >
             <Twitter />
           </SocialLink>
           <SocialLink
-            href="https://www.instagram.com/hoesnft"
+            href="https://www.instagram.com/realheroesnft"
             className="social-link social-link--instagram"
             target="_blank"
           >
             <Instgram />
           </SocialLink>
           <SocialLink
-            href="https://discord.gg/gnrudFs44M"
+            href="https://discord.gg/NyJWKWHVhF"
             className="social-link social-link--discord"
             target="_blank"
           >
